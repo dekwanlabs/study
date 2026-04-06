@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="400" viewBox="0 0 560 400">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="560" height="400" fill="#fffdf7"/>
+  <g stroke="#e5e7eb" stroke-width="1">
+    <line x1="80" y1="320" x2="80" y2="50"/>
+    <line x1="125" y1="320" x2="125" y2="50"/>
+    <line x1="170" y1="320" x2="170" y2="50"/>
+    <line x1="215" y1="320" x2="215" y2="50"/>
+    <line x1="260" y1="320" x2="260" y2="50"/>
+    <line x1="305" y1="320" x2="305" y2="50"/>
+    <line x1="350" y1="320" x2="350" y2="50"/>
+    <line x1="80" y1="320" x2="350" y2="320"/>
+    <line x1="80" y1="275" x2="350" y2="275"/>
+    <line x1="80" y1="230" x2="350" y2="230"/>
+    <line x1="80" y1="185" x2="350" y2="185"/>
+    <line x1="80" y1="140" x2="350" y2="140"/>
+    <line x1="80" y1="95" x2="350" y2="95"/>
+    <line x1="80" y1="50" x2="350" y2="50"/>
+  </g>
+  <line x1="55" y1="320" x2="390" y2="320" stroke="#334155" stroke-width="2.2" marker-end="url(#arrow)"/>
+  <line x1="80" y1="350" x2="80" y2="20" stroke="#334155" stroke-width="2.2" marker-end="url(#arrow)"/>
+  <circle cx="125" cy="230" r="5" fill="#2563eb"/>
+  <circle cx="260" cy="50" r="5" fill="#dc2626"/>
+  <line x1="125" y1="230" x2="260" y2="50" stroke="#7c3aed" stroke-width="3.5" marker-end="url(#arrow)"/>
+  <line x1="125" y1="230" x2="260" y2="230" stroke="#16a34a" stroke-width="2.2" stroke-dasharray="7 5"/>
+  <line x1="260" y1="230" x2="260" y2="50" stroke="#16a34a" stroke-width="2.2" stroke-dasharray="7 5"/>
+  <g font-family="Arial, sans-serif" font-size="16" fill="#0f172a">
+    <text x="398" y="326">x</text>
+    <text x="86" y="18">y</text>
+    <text x="60" y="340">0</text>
+    <text x="118" y="346">1</text>
+    <text x="162" y="346">2</text>
+    <text x="208" y="346">3</text>
+    <text x="252" y="346">4</text>
+    <text x="298" y="346">5</text>
+    <text x="60" y="323">0</text>
+    <text x="56" y="279">1</text>
+    <text x="56" y="234">2</text>
+    <text x="56" y="189">3</text>
+    <text x="56" y="144">4</text>
+    <text x="56" y="99">5</text>
+    <text x="56" y="54">6</text>
+    <text x="102" y="222">A(1, 2)</text>
+    <text x="268" y="44">B(4, 6)</text>
+    <text x="178" y="132" fill="#7c3aed">vector AB</text>
+    <text x="175" y="223" fill="#16a34a">+3 in x</text>
+    <text x="270" y="146" fill="#16a34a">+4 in y</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="15" fill="#475569">
+    <text x="390" y="100">Read from the picture:</text>
+    <text x="390" y="124">AB = (4 - 1, 6 - 2)</text>
+    <text x="390" y="148">AB = (3, 4)</text>
+    <text x="390" y="190">Tip:</text>
+    <text x="390" y="214">endpoint - startpoint</text>
+  </g>
+</svg>
