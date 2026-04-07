@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="420" viewBox="0 0 700 420">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="700" height="420" fill="#fffdf7"/>
+  <g stroke="#e5e7eb" stroke-width="1">
+    <line x1="140" y1="50" x2="140" y2="350"/>
+    <line x1="220" y1="50" x2="220" y2="350"/>
+    <line x1="300" y1="50" x2="300" y2="350"/>
+    <line x1="380" y1="50" x2="380" y2="350"/>
+    <line x1="460" y1="50" x2="460" y2="350"/>
+    <line x1="540" y1="50" x2="540" y2="350"/>
+    <line x1="140" y1="300" x2="540" y2="300"/>
+    <line x1="140" y1="250" x2="540" y2="250"/>
+    <line x1="140" y1="200" x2="540" y2="200"/>
+    <line x1="140" y1="150" x2="540" y2="150"/>
+    <line x1="140" y1="100" x2="540" y2="100"/>
+  </g>
+  <line x1="100" y1="350" x2="590" y2="350" stroke="#334155" stroke-width="2.4" marker-end="url(#arrow)"/>
+  <line x1="140" y1="390" x2="140" y2="18" stroke="#334155" stroke-width="2.4" marker-end="url(#arrow)"/>
+  <line x1="300" y1="50" x2="300" y2="350" stroke="#94a3b8" stroke-width="2" stroke-dasharray="7 6"/>
+  <polyline fill="none" stroke="#dc2626" stroke-width="4" points="140,100 180,187.5 220,250 260,287.5 300,300 340,287.5 380,250 420,187.5 460,100"/>
+  <circle cx="300" cy="300" r="6" fill="#2563eb"/>
+  <g font-family="Arial, sans-serif" font-size="16" fill="#0f172a">
+    <text x="598" y="356">x</text>
+    <text x="148" y="18">y</text>
+    <text x="133" y="368">0</text>
+    <text x="215" y="368">1</text>
+    <text x="295" y="368">2</text>
+    <text x="375" y="368">3</text>
+    <text x="455" y="368">4</text>
+    <text x="135" y="356">0</text>
+    <text x="119" y="306">1</text>
+    <text x="119" y="256">2</text>
+    <text x="119" y="206">3</text>
+    <text x="119" y="156">4</text>
+    <text x="119" y="106">5</text>
+    <text x="315" y="294">(2, 1)</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="17" fill="#475569">
+    <text x="395" y="82">vertex form:</text>
+    <text x="395" y="106">y = (x - 2)^2 + 1</text>
+    <text x="395" y="146">axis of symmetry:</text>
+    <text x="395" y="170">x = 2</text>
+    <text x="395" y="210">minimum value:</text>
+    <text x="395" y="234">y = 1</text>
+  </g>
+</svg>
