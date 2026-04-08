@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="240" viewBox="0 0 760 240">
+  <rect width="760" height="240" fill="#fffdf7"/>
+  <g font-family="Arial, sans-serif" fill="#0f172a">
+    <text x="36" y="34" font-size="20">KMP idea: mismatch does not force the text pointer to go back</text>
+    <text x="36" y="82" font-size="19">Text:    A B A B A C A B A B D</text>
+    <text x="36" y="132" font-size="19">Pattern: A B A B D</text>
+    <text x="36" y="182" font-size="19">next:    0 0 1 2 0</text>
+  </g>
+  <g stroke="#dc2626" stroke-width="3" fill="none">
+    <line x1="290" y1="92" x2="290" y2="142"/>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#475569" font-size="18">
+    <text x="320" y="110">mismatch at C vs D</text>
+    <text x="320" y="146">pattern jumps by next, text pointer stays</text>
+    <text x="320" y="182">core advantage: avoid repeated comparison</text>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="320" viewBox="0 0 760 320">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="760" height="320" fill="#fffdf7"/>
+  <line x1="160" y1="50" x2="160" y2="280" stroke="#2563eb" stroke-width="3"/>
+  <line x1="600" y1="50" x2="600" y2="280" stroke="#dc2626" stroke-width="3"/>
+  <g font-family="Arial, sans-serif" font-size="20" fill="#0f172a">
+    <text x="120" y="36">Client</text>
+    <text x="560" y="36">Server</text>
+  </g>
+  <g stroke="#334155" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <line x1="170" y1="90" x2="590" y2="90"/>
+    <line x1="590" y1="150" x2="170" y2="150"/>
+    <line x1="170" y1="210" x2="590" y2="210"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="18" fill="#0f172a">
+    <text x="240" y="80">1. SYN, seq = x</text>
+    <text x="250" y="140">2. SYN + ACK, seq = y, ack = x + 1</text>
+    <text x="265" y="200">3. ACK, ack = y + 1</text>
+    <text x="270" y="260">After step 3, connection established</text>
+  </g>
+</svg>
