@@ -1,31 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="300" viewBox="0 0 760 300">
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="320" viewBox="0 0 760 320">
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    <style>
+      .bg { fill: #fffdf7; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        fill: #475569;
+      }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
     </marker>
   </defs>
-  <rect width="760" height="300" fill="#fffdf7"/>
-  <g font-family="Arial, sans-serif" font-size="18" fill="#0f172a">
-    <text x="34" y="38">Paging address translation</text>
-    <text x="34" y="68">Logical address = page number p + offset d</text>
+  <rect class="bg" width="760" height="320" rx="18"/>
+  <text class="title" x="34" y="42">分页地址转换示意图</text>
+  <text class="small" x="36" y="70">逻辑地址 = 页号 p + 页内偏移 d</text>
+
+  <g transform="translate(46,108)">
+    <rect x="0" y="0" width="102" height="56" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <rect x="102" y="0" width="146" height="56" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+    <text class="text" x="20" y="34">页号 p</text>
+    <text class="text" x="138" y="34">页内偏移 d</text>
+
+    <line x1="256" y1="28" x2="330" y2="28" stroke="#334155" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+    <rect x="344" y="-16" width="140" height="88" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text class="text" x="374" y="18">页表</text>
+    <text class="small" x="364" y="48">查找：p -&gt; f</text>
+
+    <line x1="484" y1="28" x2="540" y2="28" stroke="#334155" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+    <rect x="554" y="0" width="70" height="56" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <rect x="624" y="0" width="84" height="56" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+    <text class="text" x="568" y="34">块号 f</text>
+    <text class="text" x="646" y="34">偏移 d</text>
   </g>
-  <g transform="translate(50,100)">
-    <rect x="0" y="0" width="120" height="52" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
-    <rect x="120" y="0" width="160" height="52" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
-    <text x="42" y="32" font-family="Arial, sans-serif" font-size="20" fill="#0f172a">page p</text>
-    <text x="178" y="32" font-family="Arial, sans-serif" font-size="20" fill="#0f172a">offset d</text>
-    <line x1="290" y1="26" x2="380" y2="26" stroke="#334155" stroke-width="2.5" marker-end="url(#arrow)"/>
-    <rect x="390" y="-18" width="170" height="88" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
-    <text x="418" y="12" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">Page table</text>
-    <text x="418" y="40" font-family="Arial, sans-serif" font-size="17" fill="#0f172a">p -&gt; frame f</text>
-    <line x1="560" y1="26" x2="640" y2="26" stroke="#334155" stroke-width="2.5" marker-end="url(#arrow)"/>
-    <rect x="650" y="0" width="60" height="52" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
-    <rect x="710" y="0" width="40" height="52" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
-    <text x="660" y="32" font-family="Arial, sans-serif" font-size="20" fill="#0f172a">f</text>
-    <text x="722" y="32" font-family="Arial, sans-serif" font-size="20" fill="#0f172a">d</text>
-  </g>
-  <g font-family="Arial, sans-serif" font-size="18" fill="#475569">
-    <text x="44" y="236">Physical address = frame number f + same offset d</text>
-    <text x="44" y="264">Core idea: page changes, offset stays unchanged</text>
-  </g>
+
+  <rect class="note" x="44" y="226" width="672" height="64" rx="16"/>
+  <text class="small" x="66" y="254">核心点：页号会通过页表换成物理块号，但页内偏移 d 保持不变。</text>
+  <text class="small" x="66" y="278">所以题目里经常会问：“为什么偏移量不变？”</text>
 </svg>

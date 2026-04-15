@@ -1,50 +1,85 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="420" viewBox="0 0 700 420">
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="420" viewBox="0 0 760 420">
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    <style>
+      .bg { fill: #fffdf7; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 2.5; }
+      .guide { stroke: #94a3b8; stroke-width: 2; stroke-dasharray: 7 6; }
+      .curve { fill: none; stroke: #dc2626; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        fill: #475569;
+      }
+      .highlight {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        font-weight: 600;
+        fill: #0f766e;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
     </marker>
   </defs>
-  <rect width="700" height="420" fill="#fffdf7"/>
-  <g stroke="#e5e7eb" stroke-width="1">
-    <line x1="140" y1="50" x2="140" y2="350"/>
-    <line x1="220" y1="50" x2="220" y2="350"/>
-    <line x1="300" y1="50" x2="300" y2="350"/>
-    <line x1="380" y1="50" x2="380" y2="350"/>
-    <line x1="460" y1="50" x2="460" y2="350"/>
-    <line x1="540" y1="50" x2="540" y2="350"/>
-    <line x1="140" y1="300" x2="540" y2="300"/>
-    <line x1="140" y1="250" x2="540" y2="250"/>
-    <line x1="140" y1="200" x2="540" y2="200"/>
-    <line x1="140" y1="150" x2="540" y2="150"/>
-    <line x1="140" y1="100" x2="540" y2="100"/>
+  <rect class="bg" width="760" height="420" rx="18"/>
+  <text class="title" x="34" y="42">二次函数顶点图像</text>
+  <g class="grid">
+    <line x1="120" y1="80" x2="420" y2="80"/>
+    <line x1="120" y1="130" x2="420" y2="130"/>
+    <line x1="120" y1="180" x2="420" y2="180"/>
+    <line x1="120" y1="230" x2="420" y2="230"/>
+    <line x1="120" y1="280" x2="420" y2="280"/>
+    <line x1="120" y1="330" x2="420" y2="330"/>
+    <line x1="120" y1="60" x2="120" y2="350"/>
+    <line x1="190" y1="60" x2="190" y2="350"/>
+    <line x1="260" y1="60" x2="260" y2="350"/>
+    <line x1="330" y1="60" x2="330" y2="350"/>
+    <line x1="400" y1="60" x2="400" y2="350"/>
   </g>
-  <line x1="100" y1="350" x2="590" y2="350" stroke="#334155" stroke-width="2.4" marker-end="url(#arrow)"/>
-  <line x1="140" y1="390" x2="140" y2="18" stroke="#334155" stroke-width="2.4" marker-end="url(#arrow)"/>
-  <line x1="300" y1="50" x2="300" y2="350" stroke="#94a3b8" stroke-width="2" stroke-dasharray="7 6"/>
-  <polyline fill="none" stroke="#dc2626" stroke-width="4" points="140,100 180,187.5 220,250 260,287.5 300,300 340,287.5 380,250 420,187.5 460,100"/>
-  <circle cx="300" cy="300" r="6" fill="#2563eb"/>
-  <g font-family="Arial, sans-serif" font-size="16" fill="#0f172a">
-    <text x="598" y="356">x</text>
-    <text x="148" y="18">y</text>
-    <text x="133" y="368">0</text>
-    <text x="215" y="368">1</text>
-    <text x="295" y="368">2</text>
-    <text x="375" y="368">3</text>
-    <text x="455" y="368">4</text>
-    <text x="135" y="356">0</text>
-    <text x="119" y="306">1</text>
-    <text x="119" y="256">2</text>
-    <text x="119" y="206">3</text>
-    <text x="119" y="156">4</text>
-    <text x="119" y="106">5</text>
-    <text x="315" y="294">(2, 1)</text>
+  <line class="axis" x1="90" y1="330" x2="450" y2="330" marker-end="url(#arrow)"/>
+  <line class="axis" x1="120" y1="360" x2="120" y2="40" marker-end="url(#arrow)"/>
+  <line class="guide" x1="260" y1="60" x2="260" y2="350"/>
+  <path class="curve" d="M120 80 C156 172 206 258 260 280 C314 258 364 172 400 80"/>
+  <circle cx="260" cy="280" r="6" fill="#2563eb"/>
+  <g class="text">
+    <text x="456" y="336">x</text>
+    <text x="128" y="40">y</text>
+    <text x="113" y="348">0</text>
+    <text x="184" y="354">1</text>
+    <text x="254" y="354">2</text>
+    <text x="324" y="354">3</text>
+    <text x="394" y="354">4</text>
+    <text x="102" y="335">0</text>
+    <text x="102" y="285">1</text>
+    <text x="102" y="235">2</text>
+    <text x="102" y="185">3</text>
+    <text x="102" y="135">4</text>
+    <text x="102" y="85">5</text>
+    <text x="276" y="274">顶点 (2, 1)</text>
   </g>
-  <g font-family="Arial, sans-serif" font-size="17" fill="#475569">
-    <text x="395" y="82">vertex form:</text>
-    <text x="395" y="106">y = (x - 2)^2 + 1</text>
-    <text x="395" y="146">axis of symmetry:</text>
-    <text x="395" y="170">x = 2</text>
-    <text x="395" y="210">minimum value:</text>
-    <text x="395" y="234">y = 1</text>
-  </g>
+  <rect class="note" x="500" y="76" width="220" height="224" rx="18"/>
+  <text class="highlight" x="522" y="108">配方后最清楚</text>
+  <text class="text" x="522" y="140">
+    <tspan>y = (x - 2)</tspan>
+    <tspan font-size="12" dy="-6">2</tspan>
+    <tspan font-size="16" dy="6"> + 1</tspan>
+  </text>
+  <text class="small" x="522" y="176">对称轴：x = 2</text>
+  <text class="small" x="522" y="206">顶点： (2, 1)</text>
+  <text class="small" x="522" y="236">开口向上，所以最低点</text>
+  <text class="small" x="522" y="258">就在顶点处。</text>
+  <text class="text" x="522" y="288">最小值：1</text>
 </svg>

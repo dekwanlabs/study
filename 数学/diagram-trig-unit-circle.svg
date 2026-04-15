@@ -1,57 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="420" viewBox="0 0 700 420">
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460">
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    <style>
+      .bg { fill: #fffdf7; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 2.5; }
+      .circle { fill: none; stroke: #0f766e; stroke-width: 3; }
+      .radius { stroke: #dc2626; stroke-width: 3; }
+      .guide-x { stroke: #16a34a; stroke-width: 2.2; stroke-dasharray: 6 5; }
+      .guide-y { stroke: #2563eb; stroke-width: 2.2; stroke-dasharray: 6 5; }
+      .arc { fill: none; stroke: #7c3aed; stroke-width: 2.2; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        fill: #475569;
+      }
+      .highlight {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        font-weight: 600;
+        fill: #0f766e;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
     </marker>
   </defs>
-  <rect width="700" height="420" fill="#fffdf7"/>
-  <g stroke="#e5e7eb" stroke-width="1">
-    <line x1="80" y1="90" x2="80" y2="330"/>
-    <line x1="140" y1="90" x2="140" y2="330"/>
-    <line x1="260" y1="90" x2="260" y2="330"/>
-    <line x1="320" y1="90" x2="320" y2="330"/>
-    <line x1="380" y1="90" x2="380" y2="330"/>
-    <line x1="440" y1="90" x2="440" y2="330"/>
-    <line x1="80" y1="90" x2="440" y2="90"/>
-    <line x1="80" y1="150" x2="440" y2="150"/>
-    <line x1="80" y1="270" x2="440" y2="270"/>
-    <line x1="80" y1="330" x2="440" y2="330"/>
+  <rect class="bg" width="760" height="460" rx="18"/>
+  <text class="title" x="34" y="42">单位圆与正余弦投影</text>
+  <g class="grid">
+    <line x1="70" y1="110" x2="430" y2="110"/>
+    <line x1="70" y1="170" x2="430" y2="170"/>
+    <line x1="70" y1="290" x2="430" y2="290"/>
+    <line x1="70" y1="350" x2="430" y2="350"/>
+    <line x1="110" y1="70" x2="110" y2="390"/>
+    <line x1="170" y1="70" x2="170" y2="390"/>
+    <line x1="290" y1="70" x2="290" y2="390"/>
+    <line x1="350" y1="70" x2="350" y2="390"/>
+    <line x1="410" y1="70" x2="410" y2="390"/>
   </g>
-  <line x1="40" y1="210" x2="500" y2="210" stroke="#334155" stroke-width="2.2" marker-end="url(#arrow)"/>
-  <line x1="200" y1="370" x2="200" y2="40" stroke="#334155" stroke-width="2.2" marker-end="url(#arrow)"/>
-  <circle cx="200" cy="210" r="120" fill="none" stroke="#0f766e" stroke-width="3"/>
-  <line x1="200" y1="210" x2="284.9" y2="125.1" stroke="#dc2626" stroke-width="3"/>
-  <line x1="284.9" y1="125.1" x2="284.9" y2="210" stroke="#2563eb" stroke-width="2.2" stroke-dasharray="6 5"/>
-  <line x1="200" y1="125.1" x2="284.9" y2="125.1" stroke="#16a34a" stroke-width="2.2" stroke-dasharray="6 5"/>
-  <path d="M 240 210 A 40 40 0 0 0 228 181" fill="none" stroke="#7c3aed" stroke-width="2.2"/>
-  <circle cx="284.9" cy="125.1" r="5" fill="#dc2626"/>
-  <circle cx="320" cy="210" r="4.5" fill="#0f766e"/>
-  <circle cx="200" cy="90" r="4.5" fill="#0f766e"/>
-  <circle cx="80" cy="210" r="4.5" fill="#0f766e"/>
-  <circle cx="200" cy="330" r="4.5" fill="#0f766e"/>
-  <g font-family="Arial, sans-serif" font-size="18" fill="#0f172a">
-    <text x="512" y="216">x</text>
-    <text x="208" y="36">y</text>
-    <text x="206" y="230">O</text>
-    <text x="326" y="216">(1, 0)</text>
-    <text x="208" y="84">(0, 1)</text>
-    <text x="20" y="216">(-1, 0)</text>
-    <text x="208" y="352">(0, -1)</text>
-    <text x="240" y="112">P(cos x, sin x)</text>
-    <text x="246" y="190">x</text>
-    <text x="292" y="173" fill="#2563eb">sin x</text>
-    <text x="222" y="118" fill="#16a34a">cos x</text>
+  <line class="axis" x1="40" y1="230" x2="470" y2="230" marker-end="url(#arrow)"/>
+  <line class="axis" x1="230" y1="410" x2="230" y2="36" marker-end="url(#arrow)"/>
+  <circle class="circle" cx="230" cy="230" r="120"/>
+  <line class="radius" x1="230" y1="230" x2="315" y2="145"/>
+  <line class="guide-y" x1="315" y1="145" x2="315" y2="230"/>
+  <line class="guide-x" x1="230" y1="145" x2="315" y2="145"/>
+  <path class="arc" d="M270 230 A40 40 0 0 0 258 202"/>
+  <circle cx="315" cy="145" r="5.5" fill="#dc2626"/>
+  <circle cx="350" cy="230" r="4.5" fill="#0f766e"/>
+  <circle cx="230" cy="110" r="4.5" fill="#0f766e"/>
+  <circle cx="110" cy="230" r="4.5" fill="#0f766e"/>
+  <circle cx="230" cy="350" r="4.5" fill="#0f766e"/>
+  <g class="text">
+    <text x="478" y="236">x</text>
+    <text x="238" y="36">y</text>
+    <text x="236" y="252">O</text>
+    <text x="360" y="236">(1, 0)</text>
+    <text x="238" y="104">(0, 1)</text>
+    <text x="48" y="236">(-1, 0)</text>
+    <text x="238" y="372">(0, -1)</text>
+    <text x="322" y="140">P(cos x, sin x)</text>
+    <text x="249" y="193">x</text>
+    <text x="318" y="191" fill="#2563eb">sin x</text>
+    <text x="246" y="136" fill="#16a34a">cos x</text>
   </g>
-  <g font-family="Arial, sans-serif" font-size="16" fill="#334155">
-    <text x="305" y="80">QI: sin+, cos+, tan+</text>
-    <text x="32" y="80">QII: sin+, cos-, tan-</text>
-    <text x="12" y="360">QIII: sin-, cos-, tan+</text>
-    <text x="300" y="360">QIV: sin-, cos+, tan-</text>
-  </g>
-  <g font-family="Arial, sans-serif" font-size="15" fill="#475569">
-    <text x="430" y="120">Read P on the unit circle:</text>
-    <text x="430" y="142">horizontal = cos x</text>
-    <text x="430" y="164">vertical = sin x</text>
-    <text x="430" y="186">quadrant decides the sign</text>
-  </g>
+  <rect class="note" x="490" y="68" width="236" height="314" rx="18"/>
+  <text class="highlight" x="512" y="102">看点顺序</text>
+  <text class="small" x="512" y="136">1. 横坐标就是 cos x</text>
+  <text class="small" x="512" y="166">2. 纵坐标就是 sin x</text>
+  <text class="small" x="512" y="196">3. 象限决定符号</text>
+  <text class="text" x="512" y="236">记忆口诀：</text>
+  <text class="small" x="512" y="266">一全正，二正弦，</text>
+  <text class="small" x="512" y="290">三正切，四余弦。</text>
+  <text class="small" x="512" y="330">单位圆上读到的点坐标，</text>
+  <text class="small" x="512" y="352">就是特殊角三角函数值。</text>
 </svg>

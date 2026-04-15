@@ -1,39 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="320" viewBox="0 0 760 320">
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="330" viewBox="0 0 760 330">
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    <style>
+      .bg { fill: #fffdf7; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        fill: #475569;
+      }
+      .panel { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
     </marker>
   </defs>
-  <rect width="760" height="320" fill="#fffdf7"/>
-  <g font-family="Arial, sans-serif" fill="#0f172a">
-    <text x="40" y="34" font-size="20">Stack vs Queue</text>
-  </g>
-  <g transform="translate(70,70)">
-    <text x="40" y="-18" font-family="Arial, sans-serif" font-size="18" fill="#334155">Stack (LIFO)</text>
-    <rect x="0" y="0" width="90" height="160" fill="none" stroke="#2563eb" stroke-width="3"/>
-    <rect x="0" y="120" width="90" height="40" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
-    <rect x="0" y="80" width="90" height="40" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
-    <rect x="0" y="40" width="90" height="40" fill="#93c5fd" stroke="#2563eb" stroke-width="2"/>
-    <text x="38" y="146" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">A</text>
-    <text x="38" y="106" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">B</text>
-    <text x="38" y="66" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">C</text>
-    <line x1="120" y1="50" x2="90" y2="50" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrow)"/>
-    <text x="126" y="56" font-family="Arial, sans-serif" font-size="18" fill="#dc2626">top</text>
-    <text x="-8" y="188" font-family="Arial, sans-serif" font-size="17" fill="#475569">push/pop only at top</text>
-  </g>
-  <g transform="translate(410,70)">
-    <text x="40" y="-18" font-family="Arial, sans-serif" font-size="18" fill="#334155">Queue (FIFO)</text>
-    <rect x="0" y="40" width="250" height="60" fill="none" stroke="#16a34a" stroke-width="3"/>
-    <line x1="62.5" y1="40" x2="62.5" y2="100" stroke="#16a34a" stroke-width="2"/>
-    <line x1="125" y1="40" x2="125" y2="100" stroke="#16a34a" stroke-width="2"/>
-    <line x1="187.5" y1="40" x2="187.5" y2="100" stroke="#16a34a" stroke-width="2"/>
-    <text x="26" y="76" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">A</text>
-    <text x="88" y="76" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">B</text>
-    <text x="151" y="76" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">C</text>
-    <line x1="-40" y1="70" x2="0" y2="70" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrow)"/>
-    <text x="-34" y="58" font-family="Arial, sans-serif" font-size="18" fill="#dc2626">front</text>
-    <line x1="290" y1="70" x2="250" y2="70" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
-    <text x="258" y="58" font-family="Arial, sans-serif" font-size="18" fill="#2563eb">rear</text>
-    <text x="8" y="138" font-family="Arial, sans-serif" font-size="17" fill="#475569">enqueue at rear, dequeue at front</text>
-  </g>
+  <rect class="bg" width="760" height="330" rx="18"/>
+  <text class="title" x="34" y="42">栈和队列的基本区别</text>
+
+  <rect class="panel" x="44" y="68" width="286" height="222" rx="18"/>
+  <text class="text" x="66" y="102">栈：后进先出（LIFO）</text>
+  <rect x="94" y="126" width="96" height="136" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <rect x="94" y="214" width="96" height="48" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <rect x="94" y="170" width="96" height="44" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+  <rect x="94" y="126" width="96" height="44" fill="#93c5fd" stroke="#2563eb" stroke-width="2"/>
+  <text class="text" x="136" y="244">A</text>
+  <text class="text" x="136" y="198">B</text>
+  <text class="text" x="136" y="154">C</text>
+  <line x1="220" y1="148" x2="190" y2="148" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text class="text" x="226" y="154" fill="#dc2626">栈顶 top</text>
+  <text class="small" x="66" y="278">只能在栈顶插入和删除。</text>
+
+  <rect class="panel" x="380" y="68" width="336" height="222" rx="18"/>
+  <text class="text" x="402" y="102">队列：先进先出（FIFO）</text>
+  <rect x="414" y="160" width="252" height="60" fill="none" stroke="#16a34a" stroke-width="3"/>
+  <line x1="477" y1="160" x2="477" y2="220" stroke="#16a34a" stroke-width="2"/>
+  <line x1="540" y1="160" x2="540" y2="220" stroke="#16a34a" stroke-width="2"/>
+  <line x1="603" y1="160" x2="603" y2="220" stroke="#16a34a" stroke-width="2"/>
+  <text class="text" x="436" y="197">A</text>
+  <text class="text" x="499" y="197">B</text>
+  <text class="text" x="562" y="197">C</text>
+  <line x1="390" y1="190" x2="414" y2="190" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text class="text" x="380" y="150" fill="#dc2626">队头 front</text>
+  <line x1="690" y1="190" x2="666" y2="190" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text class="text" x="644" y="150" fill="#2563eb">队尾 rear</text>
+  <text class="small" x="402" y="278">队尾入队，队头出队。</text>
 </svg>
