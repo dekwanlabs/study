@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .panel { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .note { fill: #fffaf0; stroke: #f1e0b8; stroke-width: 1.5; }
+      .card { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 2.4; }
+      .curve1 { fill: none; stroke: #dc2626; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .curve2 { fill: none; stroke: #2563eb; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .point1 { fill: #dc2626; }
+      .point2 { fill: #2563eb; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .subtitle {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        fill: #475569;
+      }
+      .paneltitle {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 14px;
+        fill: #475569;
+      }
+      .formula {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 14px;
+        fill: #475569;
+      }
+      .accent1 {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        fill: #b91c1c;
+      }
+      .accent2 {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        fill: #1d4ed8;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="900" height="560" rx="20"/>
+  <text class="title" x="34" y="44">对数函数图像对比</text>
+  <text class="subtitle" x="34" y="70">先看共同点：都过 (1, 0)，都有竖直渐近线 x = 0。再看差别：a &gt; 1 时往右上走，0 &lt; a &lt; 1 时往右下走。</text>
+
+  <g>
+    <rect class="panel" x="28" y="92" width="392" height="300" rx="20"/>
+    <text class="paneltitle" x="48" y="122">a &gt; 1：递增型</text>
+    <text class="formula" x="282" y="122">示例：y = log<tspan baseline-shift="sub" font-size="11">2</tspan> x</text>
+
+    <g class="grid">
+      <line x1="88" y1="156" x2="398" y2="156"/>
+      <line x1="88" y1="201" x2="398" y2="201"/>
+      <line x1="88" y1="246" x2="398" y2="246"/>
+      <line x1="88" y1="291" x2="398" y2="291"/>
+      <line x1="88" y1="336" x2="398" y2="336"/>
+      <line x1="150" y1="112" x2="150" y2="382"/>
+      <line x1="212" y1="112" x2="212" y2="382"/>
+      <line x1="274" y1="112" x2="274" y2="382"/>
+      <line x1="336" y1="112" x2="336" y2="382"/>
+      <line x1="398" y1="112" x2="398" y2="382"/>
+    </g>
+
+    <line class="axis" x1="60" y1="246" x2="404" y2="246" marker-end="url(#arrow)"/>
+    <line class="axis" x1="88" y1="382" x2="88" y2="114" marker-end="url(#arrow)"/>
+
+    <polyline class="curve1" points="97.3,369.2 100.4,350.5 103.5,336.0 106.6,324.2 109.7,314.2 112.8,305.5 115.9,297.8 119.0,291.0 122.1,284.8 125.2,279.2 128.3,274.0 131.4,269.2 134.5,264.7 137.6,260.5 140.7,256.6 143.8,252.8 146.9,249.3 150.0,246.0 153.1,242.8 156.2,239.8 159.3,236.9 162.4,234.2 165.5,231.5 168.6,229.0 171.7,226.5 174.8,224.2 177.9,221.9 181.0,219.7 184.1,217.5 187.2,215.5 190.3,213.5 193.4,211.6 196.5,209.7 199.6,207.8 202.7,206.1 205.8,204.3 208.9,202.6 212.0,201.0 215.1,199.4 218.2,197.8 221.3,196.3 224.4,194.8 227.5,193.4 230.6,191.9 233.7,190.5 236.8,189.2 239.9,187.8 243.0,186.5 246.1,185.2 249.2,184.0 252.3,182.7 255.4,181.5 258.5,180.3 261.6,179.2 264.7,178.0 267.8,176.9 270.9,175.8 274.0,174.7 277.1,173.6 280.2,172.5 283.3,171.5 286.4,170.5 289.5,169.5 292.6,168.5 295.7,167.5 298.8,166.6 301.9,165.6 305.0,164.7 308.1,163.7 311.2,162.8 314.3,161.9 317.4,161.1 320.5,160.2 323.6,159.3 326.7,158.5 329.8,157.6 332.9,156.8 336.0,156.0 339.1,155.2 342.2,154.4 345.3,153.6 348.4,152.8 351.5,152.1 354.6,151.3 357.7,150.6 360.8,149.8 363.9,149.1 367.0,148.4 370.1,147.6 373.2,146.9 376.3,146.2 379.4,145.5 382.5,144.8 385.6,144.2 388.7,143.5 391.8,142.8 394.9,142.2 398.0,141.5 401.1,140.9 404.2,140.2 407.3,139.6 410.4,139.0 413.5,138.3 416.6,137.7"/>
+
+    <circle class="point1" cx="150" cy="246" r="6"/>
+    <text class="text" x="162" y="240">(1, 0)</text>
+
+    <g class="text">
+      <text x="409" y="252">x</text>
+      <text x="96" y="112">y</text>
+      <text x="145" y="264">1</text>
+      <text x="207" y="264">2</text>
+      <text x="331" y="264">4</text>
+      <text x="70" y="341">-2</text>
+      <text x="70" y="296">-1</text>
+      <text x="73" y="251">0</text>
+      <text x="75" y="206">1</text>
+      <text x="75" y="161">2</text>
+    </g>
+
+    <text class="small" x="98" y="130">x = 0（竖直渐近线）</text>
+
+    <rect class="card" x="28" y="406" width="392" height="54" rx="16"/>
+    <text class="accent1" x="52" y="438">
+      <tspan>x → 0⁺ 时，y → −∞</tspan>
+      <tspan x="52" dy="22">x → +∞ 时，y → +∞</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(452,0)">
+    <rect class="panel" x="28" y="92" width="392" height="300" rx="20"/>
+    <text class="paneltitle" x="48" y="122">0 &lt; a &lt; 1：递减型</text>
+    <text class="formula" x="248" y="122">示例：y = log<tspan baseline-shift="sub" font-size="11">1/2</tspan> x</text>
+
+    <g class="grid">
+      <line x1="88" y1="156" x2="398" y2="156"/>
+      <line x1="88" y1="201" x2="398" y2="201"/>
+      <line x1="88" y1="246" x2="398" y2="246"/>
+      <line x1="88" y1="291" x2="398" y2="291"/>
+      <line x1="88" y1="336" x2="398" y2="336"/>
+      <line x1="150" y1="112" x2="150" y2="382"/>
+      <line x1="212" y1="112" x2="212" y2="382"/>
+      <line x1="274" y1="112" x2="274" y2="382"/>
+      <line x1="336" y1="112" x2="336" y2="382"/>
+      <line x1="398" y1="112" x2="398" y2="382"/>
+    </g>
+
+    <line class="axis" x1="60" y1="246" x2="404" y2="246" marker-end="url(#arrow)"/>
+    <line class="axis" x1="88" y1="382" x2="88" y2="114" marker-end="url(#arrow)"/>
+
+    <polyline class="curve2" points="97.3,122.8 100.4,141.5 103.5,156.0 106.6,167.8 109.7,177.8 112.8,186.5 115.9,194.2 119.0,201.0 122.1,207.2 125.2,212.8 128.3,218.0 131.4,222.8 134.5,227.3 137.6,231.5 140.7,235.4 143.8,239.2 146.9,242.7 150.0,246.0 153.1,249.2 156.2,252.2 159.3,255.1 162.4,257.8 165.5,260.5 168.6,263.0 171.7,265.5 174.8,267.8 177.9,270.1 181.0,272.3 184.1,274.5 187.2,276.5 190.3,278.5 193.4,280.4 196.5,282.3 199.6,284.2 202.7,285.9 205.8,287.7 208.9,289.4 212.0,291.0 215.1,292.6 218.2,294.2 221.3,295.7 224.4,297.2 227.5,298.6 230.6,300.1 233.7,301.5 236.8,302.8 239.9,304.2 243.0,305.5 246.1,306.8 249.2,308.0 252.3,309.3 255.4,310.5 258.5,311.7 261.6,312.8 264.7,314.0 267.8,315.1 270.9,316.2 274.0,317.3 277.1,318.4 280.2,319.5 283.3,320.5 286.4,321.5 289.5,322.5 292.6,323.5 295.7,324.5 298.8,325.4 301.9,326.4 305.0,327.3 308.1,328.3 311.2,329.2 314.3,330.1 317.4,330.9 320.5,331.8 323.6,332.7 326.7,333.5 329.8,334.4 332.9,335.2 336.0,336.0 339.1,336.8 342.2,337.6 345.3,338.4 348.4,339.2 351.5,339.9 354.6,340.7 357.7,341.4 360.8,342.2 363.9,342.9 367.0,343.6 370.1,344.4 373.2,345.1 376.3,345.8 379.4,346.5 382.5,347.2 385.6,347.8 388.7,348.5 391.8,349.2 394.9,349.8 398.0,350.5 401.1,351.1 404.2,351.8 407.3,352.4 410.4,353.0 413.5,353.7 416.6,354.3"/>
+
+    <circle class="point2" cx="150" cy="246" r="6"/>
+    <text class="text" x="162" y="240">(1, 0)</text>
+
+    <g class="text">
+      <text x="409" y="252">x</text>
+      <text x="96" y="112">y</text>
+      <text x="145" y="264">1</text>
+      <text x="207" y="264">2</text>
+      <text x="331" y="264">4</text>
+      <text x="70" y="341">-2</text>
+      <text x="70" y="296">-1</text>
+      <text x="73" y="251">0</text>
+      <text x="75" y="206">1</text>
+      <text x="75" y="161">2</text>
+    </g>
+
+    <text class="small" x="98" y="130">x = 0（竖直渐近线）</text>
+
+    <rect class="card" x="28" y="406" width="392" height="54" rx="16"/>
+    <text class="accent2" x="52" y="438">
+      <tspan>x → 0⁺ 时，y → +∞</tspan>
+      <tspan x="52" dy="22">x → +∞ 时，y → −∞</tspan>
+    </text>
+  </g>
+
+  <rect class="note" x="34" y="482" width="832" height="58" rx="18"/>
+  <text class="text" x="58" y="514">共同点：定义域都是 (0, +∞)，值域都是 R，都经过 (1, 0)，而且 x = 0 是竖直渐近线。</text>
+  <text class="text" x="58" y="536">区别：a &gt; 1 时递增；0 &lt; a &lt; 1 时递减，极限方向也正好相反。</text>
+</svg>
