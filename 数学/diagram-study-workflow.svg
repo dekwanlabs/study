@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .box1 { fill: #ecfeff; stroke: #06b6d4; stroke-width: 1.8; }
+      .box2 { fill: #eff6ff; stroke: #3b82f6; stroke-width: 1.8; }
+      .box3 { fill: #fef9c3; stroke: #eab308; stroke-width: 1.8; }
+      .box4 { fill: #fee2e2; stroke: #ef4444; stroke-width: 1.8; }
+      .box5 { fill: #dcfce7; stroke: #22c55e; stroke-width: 1.8; }
+      .arrow { stroke: #64748b; stroke-width: 2.4; fill: none; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        fill: #475569;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="960" height="300" rx="18"/>
+  <text class="title" x="34" y="44">教学版和题库的配合流程</text>
+
+  <rect class="box1" x="40" y="106" width="144" height="76" rx="18"/>
+  <rect class="box2" x="224" y="106" width="144" height="76" rx="18"/>
+  <rect class="box3" x="408" y="106" width="144" height="76" rx="18"/>
+  <rect class="box4" x="592" y="106" width="144" height="76" rx="18"/>
+  <rect class="box5" x="776" y="106" width="144" height="76" rx="18"/>
+
+  <text class="text" x="86" y="138">先看教学版</text>
+  <text class="small" x="66" y="162">先弄懂这一节到底在讲什么</text>
+
+  <text class="text" x="270" y="138">再刷题库</text>
+  <text class="small" x="250" y="162">立刻做对应模块的题</text>
+
+  <text class="text" x="448" y="138">标记错因</text>
+  <text class="small" x="424" y="162">公式不熟 / 结构不清 / 计算错</text>
+
+  <text class="text" x="628" y="138">回看讲解</text>
+  <text class="small" x="614" y="162">把没懂的地方再补一遍</text>
+
+  <text class="text" x="820" y="138">次日复盘</text>
+  <text class="small" x="802" y="162">第二天先回头做错题</text>
+
+  <line class="arrow" x1="184" y1="144" x2="224" y2="144" marker-end="url(#arrow)"/>
+  <line class="arrow" x1="368" y1="144" x2="408" y2="144" marker-end="url(#arrow)"/>
+  <line class="arrow" x1="552" y1="144" x2="592" y2="144" marker-end="url(#arrow)"/>
+  <line class="arrow" x1="736" y1="144" x2="776" y2="144" marker-end="url(#arrow)"/>
+</svg>

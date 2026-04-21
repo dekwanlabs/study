@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="430" viewBox="0 0 940 430">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .axis { stroke: #334155; stroke-width: 2.6; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .line { stroke: #0f766e; stroke-width: 4; }
+      .perp { stroke: #dc2626; stroke-width: 3; }
+      .pointP { fill: #7c3aed; }
+      .pointH { fill: #ea580c; }
+      .right { fill: none; stroke: #2563eb; stroke-width: 2.2; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #475569;
+      }
+      .formula {
+        font-family: "Times New Roman", "Cambria Math", "STIX Two Math", serif;
+        font-size: 20px;
+        fill: #0f172a;
+      }
+      .highlight {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #0f766e;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="940" height="430" rx="18"/>
+  <text class="title" x="34" y="42">点到直线距离示意图</text>
+
+  <g class="grid">
+    <line x1="78" y1="88" x2="458" y2="88"/>
+    <line x1="78" y1="148" x2="458" y2="148"/>
+    <line x1="78" y1="208" x2="458" y2="208"/>
+    <line x1="78" y1="268" x2="458" y2="268"/>
+    <line x1="78" y1="328" x2="458" y2="328"/>
+    <line x1="98" y1="68" x2="98" y2="348"/>
+    <line x1="158" y1="68" x2="158" y2="348"/>
+    <line x1="218" y1="68" x2="218" y2="348"/>
+    <line x1="278" y1="68" x2="278" y2="348"/>
+    <line x1="338" y1="68" x2="338" y2="348"/>
+    <line x1="398" y1="68" x2="398" y2="348"/>
+  </g>
+
+  <line class="axis" x1="48" y1="208" x2="488" y2="208" marker-end="url(#arrow)"/>
+  <line class="axis" x1="278" y1="368" x2="278" y2="38" marker-end="url(#arrow)"/>
+
+  <line class="line" x1="90" y1="300" x2="430" y2="156"/>
+  <circle class="pointP" cx="306" cy="71" r="6"/>
+  <circle class="pointH" cx="250" cy="203" r="6"/>
+  <line class="perp" x1="306" y1="71" x2="250" y2="203"/>
+  <path class="right" d="M250 203 L260 186 L275 194"/>
+
+  <g class="text">
+    <text x="438" y="160">l</text>
+    <text x="318" y="64">P(x₀, y₀)</text>
+    <text x="258" y="198">H</text>
+    <text x="286" y="142" fill="#dc2626">d</text>
+    <text x="496" y="214">x</text>
+    <text x="286" y="36">y</text>
+    <text x="286" y="230">O</text>
+  </g>
+
+  <rect class="note" x="435" y="70" width="380" height="298" rx="18"/>
+  <text class="highlight" x="548" y="104">看图顺序</text>
+  <text class="small" x="548" y="140">1. 点到直线距离，不是随便连一条线</text>
+  <text class="small" x="548" y="172">2. 必须从点 P 向直线 l 作垂线</text>
+  <text class="small" x="548" y="204">3. 垂足记作 H</text>
+  <text class="small" x="548" y="236">4. 最短线段 PH 的长度就是距离 d</text>
+  <text class="formula" x="548" y="284">d = |Ax₀ + By₀ + C|</text>
+  <text class="formula" x="548" y="316">    / √(A² + B²)</text>
+  <text class="small" x="548" y="350">本质上是在坐标里算这条垂线段的长度</text>
+</svg>

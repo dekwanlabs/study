@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="360" viewBox="0 0 920 360">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .line { stroke: #334155; stroke-width: 2.6; }
+      .split { stroke: #64748b; stroke-width: 2; }
+      .a2 { fill: #dbeafe; }
+      .ab { fill: #fde68a; }
+      .b2 { fill: #fecaca; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #475569;
+      }
+      .formula {
+        font-family: "Times New Roman", "Cambria Math", serif;
+        font-size: 22px;
+        fill: #0f766e;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+
+  <rect class="bg" width="920" height="360" rx="18"/>
+  <text class="title" x="34" y="46">完全平方公式面积图</text>
+
+  <g transform="translate(72,72)">
+    <rect x="0" y="0" width="260" height="260" fill="#ffffff" stroke="#334155" stroke-width="2.6"/>
+    <rect class="a2" x="0" y="0" width="180" height="180"/>
+    <rect class="ab" x="180" y="0" width="80" height="180"/>
+    <rect class="ab" x="0" y="180" width="180" height="80"/>
+    <rect class="b2" x="180" y="180" width="80" height="80"/>
+    <line class="split" x1="180" y1="0" x2="180" y2="260"/>
+    <line class="split" x1="0" y1="180" x2="260" y2="180"/>
+
+    <text class="text" x="72" y="102">a^2</text>
+    <text class="text" x="204" y="102">ab</text>
+    <text class="text" x="78" y="226">ab</text>
+    <text class="text" x="205" y="226">b^2</text>
+
+    <text class="text" x="86" y="-12">a</text>
+    <text class="text" x="214" y="-12">b</text>
+    <text class="text" x="-18" y="94">a</text>
+    <text class="text" x="-18" y="226">b</text>
+
+    <line class="line" x1="0" y1="-24" x2="180" y2="-24"/>
+    <line class="line" x1="180" y1="-24" x2="260" y2="-24"/>
+    <line class="line" x1="-24" y1="0" x2="-24" y2="180"/>
+    <line class="line" x1="-24" y1="180" x2="-24" y2="260"/>
+  </g>
+
+  <rect class="note" x="410" y="72" width="448" height="232" rx="18"/>
+  <text class="text" x="438" y="112">看图时抓住三件事：</text>
+  <text class="small" x="438" y="148">1. 整个大正方形边长是 a + b，所以总面积是 (a+b)^2</text>
+  <text class="small" x="438" y="182">2. 左上和右下两块分别是 a^2、b^2</text>
+  <text class="small" x="438" y="216">3. 中间两块都是 ab，所以一共是 2ab</text>
+  <text class="formula" x="438" y="266">(a+b)^2 = a^2 + 2ab + b^2</text>
+  <text class="small" x="438" y="294">这也是为什么完全平方公式中间项不是 ab，而是 2ab。</text>
+</svg>

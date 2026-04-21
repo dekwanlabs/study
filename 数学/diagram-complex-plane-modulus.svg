@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="380" viewBox="0 0 920 380">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 2.5; }
+      .radius { stroke: #0f766e; stroke-width: 3.6; }
+      .guideX { stroke: #2563eb; stroke-width: 2.2; stroke-dasharray: 6 5; }
+      .guideY { stroke: #dc2626; stroke-width: 2.2; stroke-dasharray: 6 5; }
+      .point { fill: #ea580c; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #475569;
+      }
+      .formula {
+        font-family: "Times New Roman", "Cambria Math", serif;
+        font-size: 22px;
+        fill: #0f766e;
+        font-weight: 700;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="920" height="380" rx="18"/>
+  <text class="title" x="34" y="44">复数平面与模</text>
+
+  <g class="grid">
+    <line x1="72" y1="88" x2="480" y2="88"/>
+    <line x1="72" y1="148" x2="480" y2="148"/>
+    <line x1="72" y1="208" x2="480" y2="208"/>
+    <line x1="72" y1="268" x2="480" y2="268"/>
+    <line x1="112" y1="48" x2="112" y2="328"/>
+    <line x1="172" y1="48" x2="172" y2="328"/>
+    <line x1="232" y1="48" x2="232" y2="328"/>
+    <line x1="292" y1="48" x2="292" y2="328"/>
+    <line x1="352" y1="48" x2="352" y2="328"/>
+    <line x1="412" y1="48" x2="412" y2="328"/>
+  </g>
+
+  <line class="axis" x1="48" y1="208" x2="508" y2="208" marker-end="url(#arrow)"/>
+  <line class="axis" x1="232" y1="344" x2="232" y2="20" marker-end="url(#arrow)"/>
+
+  <line class="radius" x1="232" y1="208" x2="352" y2="118"/>
+  <line class="guideX" x1="232" y1="118" x2="352" y2="118"/>
+  <line class="guideY" x1="352" y1="208" x2="352" y2="118"/>
+  <circle class="point" cx="352" cy="118" r="6"/>
+
+  <g class="text">
+    <text x="516" y="214">实轴</text>
+    <text x="240" y="22">虚轴</text>
+    <text x="240" y="202">O</text>
+    <text x="358" y="112">P(a, b)</text>
+    <text x="276" y="106" fill="#2563eb">a</text>
+    <text x="360" y="170" fill="#dc2626">b</text>
+    <text x="282" y="158" fill="#0f766e">|z|</text>
+    <text x="368" y="96">z = a + bi</text>
+  </g>
+
+  <rect class="note" x="552" y="88" width="300" height="202" rx="18"/>
+  <text class="text" x="580" y="126">看图时抓住对应关系：</text>
+  <text class="small" x="580" y="162">1. 复数 z = a + bi 对应点 P(a, b)</text>
+  <text class="small" x="580" y="192">2. 横坐标是实部 a，纵坐标是虚部系数 b</text>
+  <text class="small" x="580" y="222">3. 模 |z| 就是点 P 到原点的距离</text>
+  <text class="formula" x="580" y="262">|z| = sqrt(a^2 + b^2)</text>
+</svg>

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="430" viewBox="0 0 940 430">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .axis { stroke: #334155; stroke-width: 2.6; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .circle { fill: rgba(20,184,166,0.08); stroke: #0f766e; stroke-width: 3.5; }
+      .radius { stroke: #dc2626; stroke-width: 3; }
+      .guidex { stroke: #2563eb; stroke-width: 2.1; stroke-dasharray: 6 5; }
+      .guidey { stroke: #f59e0b; stroke-width: 2.1; stroke-dasharray: 6 5; }
+      .pointC { fill: #ea580c; }
+      .pointP { fill: #7c3aed; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #475569;
+      }
+      .formula {
+        font-family: "Times New Roman", "Cambria Math", "STIX Two Math", serif;
+        font-size: 20px;
+        fill: #0f172a;
+      }
+      .highlight {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #0f766e;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="940" height="430" rx="18"/>
+  <text class="title" x="34" y="42">圆的标准方程示意图</text>
+
+  <g class="grid">
+    <line x1="78" y1="88" x2="458" y2="88"/>
+    <line x1="78" y1="148" x2="458" y2="148"/>
+    <line x1="78" y1="208" x2="458" y2="208"/>
+    <line x1="78" y1="268" x2="458" y2="268"/>
+    <line x1="78" y1="328" x2="458" y2="328"/>
+    <line x1="98" y1="68" x2="98" y2="348"/>
+    <line x1="158" y1="68" x2="158" y2="348"/>
+    <line x1="218" y1="68" x2="218" y2="348"/>
+    <line x1="278" y1="68" x2="278" y2="348"/>
+    <line x1="338" y1="68" x2="338" y2="348"/>
+    <line x1="398" y1="68" x2="398" y2="348"/>
+  </g>
+
+  <line class="axis" x1="48" y1="208" x2="488" y2="208" marker-end="url(#arrow)"/>
+  <line class="axis" x1="278" y1="368" x2="278" y2="38" marker-end="url(#arrow)"/>
+
+  <circle class="circle" cx="230" cy="210" r="92"/>
+  <circle class="pointC" cx="230" cy="210" r="6"/>
+  <circle class="pointP" cx="300" cy="150" r="6"/>
+  <line class="radius" x1="230" y1="210" x2="300" y2="150"/>
+  <line class="guidex" x1="230" y1="210" x2="300" y2="210"/>
+  <line class="guidey" x1="300" y1="210" x2="300" y2="150"/>
+
+  <g class="text">
+    <text x="496" y="214">x</text>
+    <text x="286" y="36">y</text>
+    <text x="286" y="230">O</text>
+    <text x="176" y="202">C(a, b)</text>
+    <text x="308" y="144">P(x, y)</text>
+    <text x="255" y="174" fill="#dc2626">r</text>
+    <text x="250" y="230" fill="#2563eb">x - a</text>
+    <text x="308" y="186" fill="#f59e0b">y - b</text>
+  </g>
+
+  <rect class="note" x="440" y="70" width="370" height="300" rx="18"/>
+  <text class="highlight" x="548" y="104">看图顺序</text>
+  <text class="small" x="548" y="140">1. 圆心固定为 C(a, b)</text>
+  <text class="small" x="548" y="172">2. 圆上任意点记为 P(x, y)</text>
+  <text class="small" x="548" y="204">3. 线段 CP 就是半径 r</text>
+  <text class="small" x="548" y="236">4. 横向差是 x - a</text>
+  <text class="small" x="548" y="264">   纵向差是 y - b</text>
+  <text class="formula" x="548" y="308">√((x-a)² + (y-b)²) = r</text>
+  <text class="formula" x="548" y="342">(x-a)² + (y-b)² = r²</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="340" viewBox="0 0 960 340">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .axis { stroke: #334155; stroke-width: 2.4; }
+      .curve1 { fill: none; stroke: #0f766e; stroke-width: 4; }
+      .curve2 { fill: none; stroke: #ea580c; stroke-width: 4; }
+      .curve3 { fill: none; stroke: #2563eb; stroke-width: 4; }
+      .panel { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .pt { fill: #dc2626; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        fill: #475569;
+      }
+      .label {
+        font-family: "Times New Roman", "Cambria Math", serif;
+        font-size: 21px;
+        fill: #0f766e;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+
+  <rect class="bg" width="960" height="340" rx="18"/>
+  <text class="title" x="34" y="44">判别式和抛物线交点个数</text>
+
+  <g transform="translate(34,74)">
+    <rect class="panel" x="0" y="0" width="272" height="220" rx="18"/>
+    <line class="axis" x1="30" y1="164" x2="242" y2="164"/>
+    <line class="axis" x1="136" y1="192" x2="136" y2="26"/>
+    <path class="curve1" d="M46 82 C80 144, 106 206, 136 206 C166 206, 192 144, 226 82"/>
+    <circle class="pt" cx="88" cy="164" r="5"/>
+    <circle class="pt" cx="184" cy="164" r="5"/>
+    <text class="label" x="92" y="34">Delta &gt; 0</text>
+    <text class="text" x="92" y="198">2 个实根</text>
+    <text class="small" x="70" y="214">图像与 x 轴有两个交点</text>
+  </g>
+
+  <g transform="translate(344,74)">
+    <rect class="panel" x="0" y="0" width="272" height="220" rx="18"/>
+    <line class="axis" x1="30" y1="164" x2="242" y2="164"/>
+    <line class="axis" x1="136" y1="192" x2="136" y2="26"/>
+    <path class="curve2" d="M48 82 C84 138, 110 164, 136 164 C162 164, 188 138, 224 82"/>
+    <circle class="pt" cx="136" cy="164" r="5"/>
+    <text class="label" x="104" y="34">Delta = 0</text>
+    <text class="text" x="82" y="198">1 个实根（重根）</text>
+    <text class="small" x="76" y="214">图像与 x 轴只有一个切点</text>
+  </g>
+
+  <g transform="translate(654,74)">
+    <rect class="panel" x="0" y="0" width="272" height="220" rx="18"/>
+    <line class="axis" x1="30" y1="164" x2="242" y2="164"/>
+    <line class="axis" x1="136" y1="192" x2="136" y2="26"/>
+    <path class="curve3" d="M46 82 C82 122, 110 136, 136 136 C162 136, 190 122, 226 82"/>
+    <text class="label" x="92" y="34">Delta &lt; 0</text>
+    <text class="text" x="102" y="198">无实根</text>
+    <text class="small" x="54" y="214">图像与 x 轴没有交点</text>
+  </g>
+</svg>

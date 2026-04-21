@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="390" viewBox="0 0 940 390">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .tri { fill: #fff7ed; stroke: #334155; stroke-width: 2.6; }
+      .guide { stroke: #94a3b8; stroke-width: 1.8; stroke-dasharray: 6 5; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #475569;
+      }
+      .formula {
+        font-family: "Times New Roman", "Cambria Math", serif;
+        font-size: 21px;
+        fill: #0f766e;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+
+  <rect class="bg" width="940" height="390" rx="18"/>
+  <text class="title" x="34" y="44">解三角形先看“边和角怎么对应”</text>
+
+  <polygon class="tri" points="126,288 384,300 278,92"/>
+  <line class="guide" x1="278" y1="92" x2="278" y2="300"/>
+
+  <text class="text" x="106" y="312">B</text>
+  <text class="text" x="390" y="312">C</text>
+  <text class="text" x="270" y="82">A</text>
+
+  <text class="text" x="254" y="308" fill="#dc2626">a</text>
+  <text class="text" x="188" y="182" fill="#2563eb">c</text>
+  <text class="text" x="332" y="184" fill="#ea580c">b</text>
+
+  <text class="small" x="240" y="128">角 A 的对边是 a</text>
+  <text class="small" x="142" y="238">角 C 的对边是 c</text>
+  <text class="small" x="314" y="238">角 B 的对边是 b</text>
+
+  <rect class="note" x="484" y="72" width="380" height="252" rx="18"/>
+  <text class="text" x="512" y="112">看图时先记一个总原则：</text>
+  <text class="small" x="512" y="148">边 a 永远对角 A，边 b 永远对角 B，边 c 永远对角 C。</text>
+  <text class="small" x="512" y="182">只要看到“边和它的对角成对出现”，优先想正弦定理。</text>
+  <text class="formula" x="512" y="222">a / sin A = b / sin B = c / sin C</text>
+  <text class="small" x="512" y="258">如果题目给的是“两边和夹角”或“三边”，通常优先想余弦定理。</text>
+  <text class="formula" x="512" y="294">c^2 = a^2 + b^2 - 2ab cos C</text>
+</svg>

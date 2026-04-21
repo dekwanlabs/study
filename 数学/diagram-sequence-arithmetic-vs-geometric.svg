@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="360" viewBox="0 0 940 360">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 2.5; }
+      .arith { fill: none; stroke: #2563eb; stroke-width: 3.5; }
+      .geo { fill: none; stroke: #dc2626; stroke-width: 3.5; }
+      .ptA { fill: #2563eb; }
+      .ptG { fill: #dc2626; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #475569;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="940" height="360" rx="18"/>
+  <text class="title" x="34" y="44">等差数列和等比数列的直观区别</text>
+
+  <g class="grid">
+    <line x1="76" y1="88" x2="520" y2="88"/>
+    <line x1="76" y1="140" x2="520" y2="140"/>
+    <line x1="76" y1="192" x2="520" y2="192"/>
+    <line x1="76" y1="244" x2="520" y2="244"/>
+    <line x1="76" y1="296" x2="520" y2="296"/>
+    <line x1="132" y1="56" x2="132" y2="316"/>
+    <line x1="204" y1="56" x2="204" y2="316"/>
+    <line x1="276" y1="56" x2="276" y2="316"/>
+    <line x1="348" y1="56" x2="348" y2="316"/>
+    <line x1="420" y1="56" x2="420" y2="316"/>
+  </g>
+
+  <line class="axis" x1="48" y1="296" x2="546" y2="296" marker-end="url(#arrow)"/>
+  <line class="axis" x1="96" y1="320" x2="96" y2="34" marker-end="url(#arrow)"/>
+
+  <polyline class="arith" points="132,244 204,218 276,192 348,166 420,140"/>
+  <polyline class="geo" points="132,270 204,250 276,218 348,166 420,88"/>
+
+  <circle class="ptA" cx="132" cy="244" r="5"/>
+  <circle class="ptA" cx="204" cy="218" r="5"/>
+  <circle class="ptA" cx="276" cy="192" r="5"/>
+  <circle class="ptA" cx="348" cy="166" r="5"/>
+  <circle class="ptA" cx="420" cy="140" r="5"/>
+
+  <circle class="ptG" cx="132" cy="270" r="5"/>
+  <circle class="ptG" cx="204" cy="250" r="5"/>
+  <circle class="ptG" cx="276" cy="218" r="5"/>
+  <circle class="ptG" cx="348" cy="166" r="5"/>
+  <circle class="ptG" cx="420" cy="88" r="5"/>
+
+  <g class="text">
+    <text x="552" y="302">n</text>
+    <text x="106" y="32">a_n</text>
+    <text x="128" y="320">1</text>
+    <text x="200" y="320">2</text>
+    <text x="272" y="320">3</text>
+    <text x="344" y="320">4</text>
+    <text x="416" y="320">5</text>
+    <text x="366" y="128" fill="#2563eb">等差：每次加同一个数</text>
+    <text x="324" y="82" fill="#dc2626">等比：每次乘同一个数</text>
+  </g>
+
+  <rect class="note" x="574" y="86" width="314" height="194" rx="18"/>
+  <text class="text" x="602" y="126">看图时的核心区别：</text>
+  <text class="small" x="602" y="162">1. 等差数列关心相邻两项的差是否固定</text>
+  <text class="small" x="602" y="192">2. 等比数列关心相邻两项的比是否固定</text>
+  <text class="small" x="602" y="222">3. 所以等差更像“线性增长”</text>
+  <text class="small" x="602" y="252">4. 等比更像“指数式变化”</text>
+</svg>

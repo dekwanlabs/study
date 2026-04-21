@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="360" viewBox="0 0 920 360">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .universe { fill: #f8fafc; stroke: #334155; stroke-width: 2.2; }
+      .aonly { fill: #bfdbfe; opacity: 0.9; }
+      .bonly { fill: #fed7aa; opacity: 0.9; }
+      .inter { fill: #86efac; opacity: 0.95; }
+      .circle { fill: none; stroke: #475569; stroke-width: 2.2; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #475569;
+      }
+    </style>
+  </defs>
+
+  <rect class="bg" width="920" height="360" rx="18"/>
+  <text class="title" x="34" y="44">集合的交、并、补图示</text>
+
+  <rect class="universe" x="72" y="78" width="388" height="226" rx="18"/>
+  <circle class="aonly" cx="214" cy="190" r="84"/>
+  <circle class="bonly" cx="320" cy="190" r="84"/>
+  <path class="inter" d="M236 109 A84 84 0 0 1 236 271 A84 84 0 0 0 298 271 A84 84 0 0 1 298 109 A84 84 0 0 0 236 109 Z"/>
+  <circle class="circle" cx="214" cy="190" r="84"/>
+  <circle class="circle" cx="320" cy="190" r="84"/>
+
+  <text class="text" x="100" y="104">全集 U</text>
+  <text class="text" x="168" y="150">A</text>
+  <text class="text" x="338" y="150">B</text>
+  <text class="text" x="246" y="196">A∩B</text>
+  <text class="small" x="132" y="228">只属于 A</text>
+  <text class="small" x="330" y="228">只属于 B</text>
+  <text class="small" x="82" y="284">矩形里但圆 A 外的区域，就是 A 的补集的一部分图像直观。</text>
+
+  <rect class="note" x="516" y="90" width="330" height="198" rx="18"/>
+  <text class="text" x="544" y="128">看图时这样记：</text>
+  <text class="small" x="544" y="164">1. 交集 A∩B：中间重合的那块</text>
+  <text class="small" x="544" y="194">2. 并集 A∪B：两个圆覆盖到的全部区域</text>
+  <text class="small" x="544" y="224">3. 补集 A^c：在全集 U 中，但不在 A 中</text>
+  <text class="small" x="544" y="254">所以交集更“窄”，并集更“宽”。</text>
+</svg>

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="430" viewBox="0 0 940 430">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .axis { stroke: #334155; stroke-width: 2.6; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .line { stroke: #0f766e; stroke-width: 4; }
+      .segx { stroke: #2563eb; stroke-width: 2.2; stroke-dasharray: 6 5; }
+      .segy { stroke: #dc2626; stroke-width: 2.2; stroke-dasharray: 6 5; }
+      .pointP { fill: #ea580c; }
+      .pointQ { fill: #7c3aed; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #475569;
+      }
+      .formula {
+        font-family: "Times New Roman", "Cambria Math", "STIX Two Math", serif;
+        font-size: 20px;
+        fill: #0f172a;
+      }
+      .highlight {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #0f766e;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="940" height="430" rx="18"/>
+  <text class="title" x="34" y="42">直线的点斜式示意图</text>
+
+  <g class="grid">
+    <line x1="78" y1="88" x2="458" y2="88"/>
+    <line x1="78" y1="148" x2="458" y2="148"/>
+    <line x1="78" y1="208" x2="458" y2="208"/>
+    <line x1="78" y1="268" x2="458" y2="268"/>
+    <line x1="78" y1="328" x2="458" y2="328"/>
+    <line x1="98" y1="68" x2="98" y2="348"/>
+    <line x1="158" y1="68" x2="158" y2="348"/>
+    <line x1="218" y1="68" x2="218" y2="348"/>
+    <line x1="278" y1="68" x2="278" y2="348"/>
+    <line x1="338" y1="68" x2="338" y2="348"/>
+    <line x1="398" y1="68" x2="398" y2="348"/>
+  </g>
+
+  <line class="axis" x1="48" y1="208" x2="488" y2="208" marker-end="url(#arrow)"/>
+  <line class="axis" x1="278" y1="368" x2="278" y2="38" marker-end="url(#arrow)"/>
+
+  <line class="line" x1="100" y1="292" x2="430" y2="100"/>
+  <circle class="pointP" cx="190" cy="240" r="6"/>
+  <circle class="pointQ" cx="370" cy="136" r="6"/>
+  <line class="segx" x1="190" y1="240" x2="370" y2="240"/>
+  <line class="segy" x1="370" y1="240" x2="370" y2="136"/>
+
+  <g class="text">
+    <text x="496" y="214">x</text>
+    <text x="286" y="36">y</text>
+    <text x="286" y="230">O</text>
+    <text x="138" y="232">P(x₀, y₀)</text>
+    <text x="378" y="128">Q(x, y)</text>
+    <text x="258" y="262" fill="#2563eb">x - x₀</text>
+    <text x="378" y="188" fill="#dc2626">y - y₀</text>
+    <text x="404" y="108">l</text>
+  </g>
+
+  <rect class="note" x="450" y="70" width="360" height="284" rx="18"/>
+  <text class="highlight" x="548" y="104">看图顺序</text>
+  <text class="small" x="548" y="140">1. 先固定直线上的一点 P(x₀, y₀)</text>
+  <text class="small" x="548" y="172">2. 再取另一点 Q(x, y)</text>
+  <text class="small" x="548" y="204">3. 横着看，变化量是 x - x₀</text>
+  <text class="small" x="548" y="236">4. 竖着看，变化量是 y - y₀</text>
+  <text class="small" x="548" y="268">5. 斜率 = 纵变 / 横变</text>
+  <text class="formula" x="548" y="312">k = (y - y₀) / (x - x₀)</text>
+  <text class="formula" x="548" y="342">y - y₀ = k(x - x₀)</text>
+</svg>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="400" viewBox="0 0 940 400">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 2.6; }
+      .diag { stroke: #94a3b8; stroke-width: 2; stroke-dasharray: 7 6; }
+      .exp { fill: none; stroke: #0f766e; stroke-width: 4; }
+      .log { fill: none; stroke: #dc2626; stroke-width: 4; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .pt1 { fill: #0f766e; }
+      .pt2 { fill: #dc2626; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #475569;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="940" height="400" rx="18"/>
+  <text class="title" x="34" y="44">指数函数与对数函数互为反函数</text>
+
+  <g class="grid">
+    <line x1="70" y1="84" x2="500" y2="84"/>
+    <line x1="70" y1="144" x2="500" y2="144"/>
+    <line x1="70" y1="204" x2="500" y2="204"/>
+    <line x1="70" y1="264" x2="500" y2="264"/>
+    <line x1="70" y1="324" x2="500" y2="324"/>
+    <line x1="110" y1="44" x2="110" y2="344"/>
+    <line x1="190" y1="44" x2="190" y2="344"/>
+    <line x1="270" y1="44" x2="270" y2="344"/>
+    <line x1="350" y1="44" x2="350" y2="344"/>
+    <line x1="430" y1="44" x2="430" y2="344"/>
+  </g>
+
+  <line class="axis" x1="46" y1="204" x2="530" y2="204" marker-end="url(#arrow)"/>
+  <line class="axis" x1="270" y1="352" x2="270" y2="18" marker-end="url(#arrow)"/>
+  <line class="diag" x1="80" y1="324" x2="470" y2="58"/>
+
+  <path class="exp" d="M82 258 C128 252, 176 242, 220 222 C260 204, 306 174, 350 130 C388 92, 420 62, 448 38"/>
+  <path class="log" d="M286 318 C300 274, 322 238, 352 206 C388 166, 426 136, 468 110"/>
+
+  <circle class="pt1" cx="270" cy="144" r="5.5"/>
+  <circle class="pt2" cx="350" cy="204" r="5.5"/>
+
+  <g class="text">
+    <text x="538" y="210">x</text>
+    <text x="278" y="18">y</text>
+    <text x="278" y="196">O</text>
+    <text x="280" y="138">(0, 1)</text>
+    <text x="360" y="198">(1, 0)</text>
+    <text x="392" y="88" fill="#0f766e">y = a^x</text>
+    <text x="412" y="126" fill="#dc2626">y = log_a x</text>
+    <text x="386" y="84" fill="#64748b">y = x</text>
+  </g>
+
+  <rect class="note" x="560" y="78" width="332" height="220" rx="18"/>
+  <text class="text" x="588" y="118">看图时这样理解：</text>
+  <text class="small" x="588" y="154">1. 指数函数过点 (0, 1)</text>
+  <text class="small" x="588" y="184">2. 对数函数过点 (1, 0)</text>
+  <text class="small" x="588" y="214">3. 两条曲线关于 y = x 对称</text>
+  <text class="small" x="588" y="244">4. 这正是“互为反函数”的图像意义</text>
+  <text class="small" x="588" y="274">图中画的是 a &gt; 1 的情况，所以两者都递增。</text>
+</svg>

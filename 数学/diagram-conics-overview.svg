@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="380" viewBox="0 0 980 380">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .panel { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .axis { stroke: #94a3b8; stroke-width: 1.6; }
+      .ellipse { fill: none; stroke: #0f766e; stroke-width: 3.8; }
+      .hyper { fill: none; stroke: #dc2626; stroke-width: 3.8; }
+      .asym { stroke: #f59e0b; stroke-width: 1.8; stroke-dasharray: 6 5; }
+      .parabola { fill: none; stroke: #2563eb; stroke-width: 3.8; }
+      .directrix { stroke: #7c3aed; stroke-width: 2.2; stroke-dasharray: 6 5; }
+      .focus { fill: #111827; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        fill: #475569;
+      }
+    </style>
+  </defs>
+
+  <rect class="bg" width="980" height="380" rx="18"/>
+  <text class="title" x="34" y="44">圆锥曲线三种基本模型</text>
+
+  <g transform="translate(34,74)">
+    <rect class="panel" x="0" y="0" width="274" height="252" rx="18"/>
+    <line class="axis" x1="36" y1="126" x2="238" y2="126"/>
+    <line class="axis" x1="137" y1="36" x2="137" y2="216"/>
+    <ellipse class="ellipse" cx="137" cy="126" rx="92" ry="56"/>
+    <circle class="focus" cx="98" cy="126" r="4.5"/>
+    <circle class="focus" cx="176" cy="126" r="4.5"/>
+    <text class="text" x="104" y="238">椭圆</text>
+    <text class="small" x="56" y="64">到两个焦点的距离和为定值</text>
+  </g>
+
+  <g transform="translate(352,74)">
+    <rect class="panel" x="0" y="0" width="274" height="252" rx="18"/>
+    <line class="axis" x1="36" y1="126" x2="238" y2="126"/>
+    <line class="axis" x1="137" y1="36" x2="137" y2="216"/>
+    <line class="asym" x1="58" y1="48" x2="216" y2="204"/>
+    <line class="asym" x1="58" y1="204" x2="216" y2="48"/>
+    <path class="hyper" d="M112 70 C86 92, 72 110, 66 126 C72 142, 86 160, 112 182"/>
+    <path class="hyper" d="M162 70 C188 92, 202 110, 208 126 C202 142, 188 160, 162 182"/>
+    <circle class="focus" cx="98" cy="126" r="4.5"/>
+    <circle class="focus" cx="176" cy="126" r="4.5"/>
+    <text class="text" x="104" y="238">双曲线</text>
+    <text class="small" x="48" y="64">到两个焦点的距离差的绝对值为定值</text>
+  </g>
+
+  <g transform="translate(670,74)">
+    <rect class="panel" x="0" y="0" width="274" height="252" rx="18"/>
+    <line class="axis" x1="36" y1="126" x2="238" y2="126"/>
+    <line class="axis" x1="137" y1="36" x2="137" y2="216"/>
+    <line class="directrix" x1="88" y1="36" x2="88" y2="216"/>
+    <path class="parabola" d="M108 62 C156 86, 190 108, 214 126 C190 144, 156 166, 108 190"/>
+    <circle class="focus" cx="132" cy="126" r="4.5"/>
+    <text class="text" x="104" y="238">抛物线</text>
+    <text class="small" x="40" y="64">到焦点的距离 = 到准线的距离</text>
+  </g>
+</svg>

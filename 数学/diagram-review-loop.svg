@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="320" viewBox="0 0 940 320">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .step1 { fill: #e0f2fe; stroke: #0ea5e9; stroke-width: 1.8; }
+      .step2 { fill: #ede9fe; stroke: #8b5cf6; stroke-width: 1.8; }
+      .step3 { fill: #dcfce7; stroke: #22c55e; stroke-width: 1.8; }
+      .step4 { fill: #fef3c7; stroke: #f59e0b; stroke-width: 1.8; }
+      .step5 { fill: #fee2e2; stroke: #ef4444; stroke-width: 1.8; }
+      .arrow { stroke: #64748b; stroke-width: 2.4; fill: none; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        fill: #475569;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="940" height="320" rx="18"/>
+  <text class="title" x="34" y="44">从“看懂”到“会做”的复习闭环</text>
+
+  <rect class="step1" x="42" y="120" width="132" height="74" rx="18"/>
+  <rect class="step2" x="224" y="88" width="132" height="74" rx="18"/>
+  <rect class="step3" x="406" y="120" width="132" height="74" rx="18"/>
+  <rect class="step4" x="588" y="88" width="132" height="74" rx="18"/>
+  <rect class="step5" x="770" y="120" width="132" height="74" rx="18"/>
+
+  <text class="text" x="74" y="150">先看懂概念</text>
+  <text class="small" x="64" y="174">知道公式在说什么</text>
+
+  <text class="text" x="258" y="118">再会套公式</text>
+  <text class="small" x="246" y="142">能把题目条件代进去</text>
+
+  <text class="text" x="438" y="150">独立做题</text>
+  <text class="small" x="428" y="174">不看答案先自己推</text>
+
+  <text class="text" x="620" y="118">复盘错因</text>
+  <text class="small" x="602" y="142">看错在概念还是步骤</text>
+
+  <text class="text" x="804" y="150">再次练习</text>
+  <text class="small" x="788" y="174">把同类题再做一遍</text>
+
+  <line class="arrow" x1="174" y1="146" x2="224" y2="126" marker-end="url(#arrow)"/>
+  <line class="arrow" x1="356" y1="126" x2="406" y2="146" marker-end="url(#arrow)"/>
+  <line class="arrow" x1="538" y1="146" x2="588" y2="126" marker-end="url(#arrow)"/>
+  <line class="arrow" x1="720" y1="126" x2="770" y2="146" marker-end="url(#arrow)"/>
+  <path class="arrow" d="M836 202 C836 252, 134 252, 134 202" marker-end="url(#arrow)"/>
+  <text class="small" x="350" y="274">真正有效的学习不是一遍过，而是“做 - 错 - 改 - 再做”的循环。</text>
+</svg>
