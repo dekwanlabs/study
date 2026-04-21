@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .axis { stroke: #334155; stroke-width: 3; }
+      .circle { fill: none; stroke: #0f766e; stroke-width: 3.5; }
+      .q1 { fill: #dcfce7; opacity: 0.85; }
+      .q2 { fill: #dbeafe; opacity: 0.85; }
+      .q3 { fill: #fee2e2; opacity: 0.85; }
+      .q4 { fill: #fef3c7; opacity: 0.9; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .axisText {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #0f172a;
+      }
+      .quad {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .sign {
+        font-family: "Times New Roman", "Cambria Math", serif;
+        font-size: 19px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #475569;
+      }
+      .highlight {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #0f766e;
+      }
+      .plus { fill: #15803d; font-weight: 700; }
+      .minus { fill: #dc2626; font-weight: 700; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="900" height="500" rx="18"/>
+  <text class="title" x="34" y="44">三角函数象限符号图</text>
+
+  <g transform="translate(30 0)">
+    <path class="q1" d="M320 250 L320 110 A140 140 0 0 1 460 250 Z"/>
+    <path class="q2" d="M320 250 L180 250 A140 140 0 0 1 320 110 Z"/>
+    <path class="q3" d="M320 250 L320 390 A140 140 0 0 1 180 250 Z"/>
+    <path class="q4" d="M320 250 L460 250 A140 140 0 0 1 320 390 Z"/>
+
+    <line class="axis" x1="40" y1="250" x2="500" y2="250" marker-end="url(#arrow)"/>
+    <line class="axis" x1="320" y1="430" x2="320" y2="40" marker-end="url(#arrow)"/>
+    <circle class="circle" cx="320" cy="250" r="140"/>
+
+    <g class="axisText">
+      <text x="507" y="256">x</text>
+      <text x="328" y="38">y</text>
+      <text x="330" y="272">O</text>
+      <text x="440" y="246">(+, 0)</text>
+      <text x="332" y="108">(0, +)</text>
+      <text x="122" y="246">(-, 0)</text>
+      <text x="332" y="414">(0, -)</text>
+    </g>
+
+    <g class="quad">
+      <text x="372" y="138">第一象限</text>
+      <text x="214" y="138">第二象限</text>
+      <text x="212" y="382">第三象限</text>
+      <text x="372" y="382">第四象限</text>
+    </g>
+
+    <g class="sign">
+      <text x="360" y="178">sin x <tspan class="plus">+</tspan></text>
+      <text x="360" y="208">cos x <tspan class="plus">+</tspan></text>
+      <text x="360" y="238">tan x <tspan class="plus">+</tspan></text>
+
+      <text x="205" y="178">sin x <tspan class="plus">+</tspan></text>
+      <text x="205" y="208">cos x <tspan class="minus">-</tspan></text>
+      <text x="205" y="238">tan x <tspan class="minus">-</tspan></text>
+
+      <text x="202" y="304">sin x <tspan class="minus">-</tspan></text>
+      <text x="202" y="334">cos x <tspan class="minus">-</tspan></text>
+      <text x="202" y="364">tan x <tspan class="plus">+</tspan></text>
+
+      <text x="360" y="304">sin x <tspan class="minus">-</tspan></text>
+      <text x="360" y="334">cos x <tspan class="plus">+</tspan></text>
+      <text x="360" y="364">tan x <tspan class="minus">-</tspan></text>
+    </g>
+  </g>
+
+  <rect class="note" x="585" y="76" width="278" height="316" rx="18"/>
+  <text class="highlight" x="608" y="112">一句速记</text>
+  <text class="small" x="608" y="150">一全正，二正弦，</text>
+  <text class="small" x="608" y="178">三正切，四余弦。</text>
+
+  <text class="highlight" x="608" y="226">为什么这样记</text>
+  <text class="small" x="608" y="262">cos x 看横坐标符号；</text>
+  <text class="small" x="608" y="290">sin x 看纵坐标符号；</text>
+  <text class="small" x="608" y="318">tan x = sin x / cos x，</text>
+  <text class="small" x="608" y="346">同号为正，异号为负。</text>
+
+  <text class="highlight" x="608" y="394">做题顺序</text>
+  <text class="small" x="608" y="430">先看象限，再定符号，</text>
+  <text class="small" x="608" y="458">最后再代数值。</text>
+</svg>

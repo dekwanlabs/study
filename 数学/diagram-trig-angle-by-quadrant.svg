@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="620" viewBox="0 0 980 620">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .panel { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .axis { stroke: #334155; stroke-width: 2.4; }
+      .circle { fill: none; stroke: #0f766e; stroke-width: 3; }
+      .ray { stroke: #dc2626; stroke-width: 3; }
+      .arc { fill: none; stroke: #7c3aed; stroke-width: 2.2; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .subtitle {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        fill: #475569;
+      }
+      .panelTitle {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #0f172a;
+      }
+      .math {
+        font-family: "Times New Roman", "Cambria Math", "STIX Two Math", serif;
+        font-size: 20px;
+        fill: #0f172a;
+      }
+      .note {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #475569;
+      }
+      .alpha {
+        font-family: "Times New Roman", "Cambria Math", "STIX Two Math", serif;
+        font-size: 18px;
+        fill: #7c3aed;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="980" height="620" rx="18"/>
+  <text class="title" x="34" y="44">P 点在四个象限时，角怎么写</text>
+  <text class="subtitle" x="34" y="76">统一设参考角为 α，且 0 &lt; α &lt; π/2</text>
+
+  <rect class="panel" x="34" y="100" width="430" height="220" rx="18"/>
+  <rect class="panel" x="516" y="100" width="430" height="220" rx="18"/>
+  <rect class="panel" x="34" y="356" width="430" height="220" rx="18"/>
+  <rect class="panel" x="516" y="356" width="430" height="220" rx="18"/>
+
+  <!-- 第一象限 -->
+  <g transform="translate(34 100)">
+    <text class="panelTitle" x="24" y="34">第一象限</text>
+    <line class="axis" x1="40" y1="122" x2="250" y2="122" marker-end="url(#arrow)"/>
+    <line class="axis" x1="145" y1="205" x2="145" y2="28" marker-end="url(#arrow)"/>
+    <circle class="circle" cx="145" cy="122" r="72"/>
+    <line class="ray" x1="145" y1="122" x2="204" y2="81"/>
+    <circle cx="204" cy="81" r="5.5" fill="#dc2626"/>
+    <text class="text" x="210" y="76">P</text>
+    <text class="text" x="257" y="128">x</text>
+    <text class="text" x="152" y="24">y</text>
+    <text class="text" x="152" y="144">O</text>
+    <path class="arc" d="M173 122 A28 28 0 0 0 168 106"/>
+    <text class="alpha" x="170" y="112">α</text>
+    <text class="math" x="120" y="206">θ = α</text>
+  </g>
+
+  <!-- 第二象限 -->
+  <g transform="translate(516 100)">
+    <text class="panelTitle" x="24" y="34">第二象限</text>
+    <line class="axis" x1="40" y1="122" x2="250" y2="122" marker-end="url(#arrow)"/>
+    <line class="axis" x1="145" y1="205" x2="145" y2="28" marker-end="url(#arrow)"/>
+    <circle class="circle" cx="145" cy="122" r="72"/>
+    <line class="ray" x1="145" y1="122" x2="86" y2="81"/>
+    <circle cx="86" cy="81" r="5.5" fill="#dc2626"/>
+    <text class="text" x="68" y="76">P</text>
+    <text class="text" x="257" y="128">x</text>
+    <text class="text" x="152" y="24">y</text>
+    <text class="text" x="152" y="144">O</text>
+    <path class="arc" d="M117 122 A28 28 0 0 1 122 106"/>
+    <text class="alpha" x="107" y="112">α</text>
+    <text class="math" x="92" y="206">θ = π - α</text>
+  </g>
+
+  <!-- 第三象限 -->
+  <g transform="translate(34 356)">
+    <text class="panelTitle" x="24" y="34">第三象限</text>
+    <line class="axis" x1="40" y1="122" x2="250" y2="122" marker-end="url(#arrow)"/>
+    <line class="axis" x1="145" y1="205" x2="145" y2="28" marker-end="url(#arrow)"/>
+    <circle class="circle" cx="145" cy="122" r="72"/>
+    <line class="ray" x1="145" y1="122" x2="86" y2="163"/>
+    <circle cx="86" cy="163" r="5.5" fill="#dc2626"/>
+    <text class="text" x="68" y="178">P</text>
+    <text class="text" x="257" y="128">x</text>
+    <text class="text" x="152" y="24">y</text>
+    <text class="text" x="152" y="144">O</text>
+    <path class="arc" d="M117 122 A28 28 0 0 0 122 138"/>
+    <text class="alpha" x="107" y="148">α</text>
+    <text class="math" x="92" y="206">θ = π + α</text>
+  </g>
+
+  <!-- 第四象限 -->
+  <g transform="translate(516 356)">
+    <text class="panelTitle" x="24" y="34">第四象限</text>
+    <line class="axis" x1="40" y1="122" x2="250" y2="122" marker-end="url(#arrow)"/>
+    <line class="axis" x1="145" y1="205" x2="145" y2="28" marker-end="url(#arrow)"/>
+    <circle class="circle" cx="145" cy="122" r="72"/>
+    <line class="ray" x1="145" y1="122" x2="204" y2="163"/>
+    <circle cx="204" cy="163" r="5.5" fill="#dc2626"/>
+    <text class="text" x="210" y="178">P</text>
+    <text class="text" x="257" y="128">x</text>
+    <text class="text" x="152" y="24">y</text>
+    <text class="text" x="152" y="144">O</text>
+    <path class="arc" d="M173 122 A28 28 0 0 1 168 138"/>
+    <text class="alpha" x="171" y="148">α</text>
+    <text class="math" x="74" y="206">θ = 2π - α</text>
+  </g>
+
+  <text class="note" x="34" y="604">看这种图时，先认“参考角 α”，再看点 P 落在哪个象限，最后把角写成对应的标准角形式。</text>
+</svg>
