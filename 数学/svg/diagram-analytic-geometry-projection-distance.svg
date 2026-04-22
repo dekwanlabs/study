@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="430" viewBox="0 0 940 430">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 2.6; }
+      .line { stroke: #0f766e; stroke-width: 4; }
+      .segLine { stroke: #2563eb; stroke-width: 3.2; }
+      .segPerp { stroke: #dc2626; stroke-width: 3.2; }
+      .vecQP { stroke: #7c3aed; stroke-width: 3.2; stroke-dasharray: 8 6; }
+      .unit { stroke: #16a34a; stroke-width: 3; }
+      .pointP { fill: #ea580c; }
+      .pointQ { fill: #7c3aed; }
+      .pointH { fill: #dc2626; }
+      .right { fill: none; stroke: #2563eb; stroke-width: 2.2; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #475569;
+      }
+      .formula {
+        font-family: "Times New Roman", "Cambria Math", serif;
+        font-size: 21px;
+        fill: #0f172a;
+      }
+      .highlight {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #0f766e;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+    <marker id="arrowPurple" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#7c3aed"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrowText" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#0f172a"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="940" height="430" rx="18"/>
+  <text class="title" x="34" y="42">为什么“投影长度”就是点到直线距离</text>
+
+  <g class="grid">
+    <line x1="78" y1="88" x2="458" y2="88"/>
+    <line x1="78" y1="148" x2="458" y2="148"/>
+    <line x1="78" y1="208" x2="458" y2="208"/>
+    <line x1="78" y1="268" x2="458" y2="268"/>
+    <line x1="78" y1="328" x2="458" y2="328"/>
+    <line x1="98" y1="68" x2="98" y2="348"/>
+    <line x1="158" y1="68" x2="158" y2="348"/>
+    <line x1="218" y1="68" x2="218" y2="348"/>
+    <line x1="278" y1="68" x2="278" y2="348"/>
+    <line x1="338" y1="68" x2="338" y2="348"/>
+    <line x1="398" y1="68" x2="398" y2="348"/>
+  </g>
+
+  <line class="axis" x1="48" y1="208" x2="488" y2="208" marker-end="url(#arrow)"/>
+  <line class="axis" x1="278" y1="368" x2="278" y2="38" marker-end="url(#arrow)"/>
+
+  <line class="line" x1="90" y1="320" x2="430" y2="140"/>
+  <circle class="pointQ" cx="158" cy="284" r="6"/>
+  <circle class="pointH" cx="277" cy="221" r="6"/>
+  <circle class="pointP" cx="223" cy="119" r="6"/>
+  <line class="segLine" x1="158" y1="284" x2="277" y2="221" marker-end="url(#arrowBlue)"/>
+  <line class="segPerp" x1="277" y1="221" x2="223" y2="119" marker-end="url(#arrowRed)"/>
+  <line class="vecQP" x1="158" y1="284" x2="223" y2="119" marker-end="url(#arrowPurple)"/>
+  <line class="unit" x1="277" y1="221" x2="256.4" y2="182.1" marker-end="url(#arrowGreen)"/>
+  <path class="right" d="M289.4 214.4 L282.9 202.0 L270.5 208.6"/>
+
+  <g class="text">
+    <text x="436" y="144">l</text>
+    <text x="134" y="300">Q</text>
+    <text x="286" y="216">H</text>
+    <text x="230" y="114">P</text>
+    <text x="182" y="260" fill="#2563eb">QH</text>
+    <line x1="180" y1="237" x2="200" y2="237" stroke="#2563eb" stroke-width="2.1" marker-end="url(#arrowBlue)"/>
+    <text x="228" y="170" fill="#dc2626">|HP| = d</text>
+    <text x="176" y="188" fill="#7c3aed">QP</text>
+    <line x1="174" y1="165" x2="196" y2="165" stroke="#7c3aed" stroke-width="2.1" marker-end="url(#arrowPurple)"/>
+    <text x="252" y="194" fill="#16a34a">e</text>
+    <text x="496" y="214">x</text>
+    <text x="286" y="36">y</text>
+    <text x="286" y="230">O</text>
+  </g>
+
+  <rect class="note" x="506" y="78" width="346" height="272" rx="18"/>
+  <text class="highlight" x="616" y="112">看图顺序</text>
+  <text class="small" x="534" y="148">1. 先把从 Q 到 P 的位移拆成两段：</text>
+  <text class="formula" x="534" y="182">QP</text>
+  <text class="formula" x="566" y="182">=</text>
+  <text class="formula" x="586" y="182">QH</text>
+  <text class="formula" x="620" y="182">+</text>
+  <text class="formula" x="639" y="182">HP</text>
+  <line x1="534" y1="158" x2="556" y2="158" stroke="#0f172a" stroke-width="1.9" marker-end="url(#arrowText)"/>
+  <line x1="586" y1="158" x2="608" y2="158" stroke="#0f172a" stroke-width="1.9" marker-end="url(#arrowText)"/>
+  <line x1="639" y1="158" x2="661" y2="158" stroke="#0f172a" stroke-width="1.9" marker-end="url(#arrowText)"/>
+  <text class="small" x="534" y="216">2. QH 沿着直线 l 方向，和法向量垂直</text>
+  <text class="small" x="534" y="248">3. HP 沿着法向量方向，它的长度正好是距离 d</text>
+  <text class="small" x="534" y="280">4. 所以 QP 在单位法向量 e 方向上的投影</text>
+  <text class="small" x="534" y="304">   最后只会保留下 HP 这一段</text>
+  <text class="formula" x="534" y="338">d = |</text>
+  <text class="formula" x="590" y="338">QP</text>
+  <text class="formula" x="620" y="338">· e |</text>
+  <line x1="590" y1="314" x2="612" y2="314" stroke="#0f172a" stroke-width="1.9" marker-end="url(#arrowText)"/>
+</svg>

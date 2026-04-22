@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="430" viewBox="0 0 940 430">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 2.6; }
+      .line { stroke: #0f766e; stroke-width: 4; }
+      .dir { stroke: #2563eb; stroke-width: 3.2; }
+      .normal { stroke: #dc2626; stroke-width: 3.2; }
+      .pointQ { fill: #7c3aed; }
+      .pointH { fill: #ea580c; }
+      .right { fill: none; stroke: #2563eb; stroke-width: 2.2; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #475569;
+      }
+      .formula {
+        font-family: "Times New Roman", "Cambria Math", serif;
+        font-size: 21px;
+        fill: #0f172a;
+      }
+      .highlight {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #0f766e;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="940" height="430" rx="18"/>
+  <text class="title" x="34" y="42">为什么 (A, B) 是直线的法向量</text>
+
+  <g class="grid">
+    <line x1="78" y1="88" x2="458" y2="88"/>
+    <line x1="78" y1="148" x2="458" y2="148"/>
+    <line x1="78" y1="208" x2="458" y2="208"/>
+    <line x1="78" y1="268" x2="458" y2="268"/>
+    <line x1="78" y1="328" x2="458" y2="328"/>
+    <line x1="98" y1="68" x2="98" y2="348"/>
+    <line x1="158" y1="68" x2="158" y2="348"/>
+    <line x1="218" y1="68" x2="218" y2="348"/>
+    <line x1="278" y1="68" x2="278" y2="348"/>
+    <line x1="338" y1="68" x2="338" y2="348"/>
+    <line x1="398" y1="68" x2="398" y2="348"/>
+  </g>
+
+  <line class="axis" x1="48" y1="208" x2="488" y2="208" marker-end="url(#arrow)"/>
+  <line class="axis" x1="278" y1="368" x2="278" y2="38" marker-end="url(#arrow)"/>
+
+  <line class="line" x1="90" y1="300" x2="430" y2="140"/>
+  <circle class="pointQ" cx="158" cy="268" r="6"/>
+  <circle class="pointQ" cx="311" cy="196" r="6"/>
+  <circle class="pointH" cx="250" cy="225" r="6"/>
+  <line class="dir" x1="158" y1="268" x2="311" y2="196" marker-end="url(#arrowBlue)"/>
+  <line class="normal" x1="250" y1="225" x2="170" y2="55" marker-end="url(#arrowRed)"/>
+  <path class="right" d="M263.6 218.6 L257.2 205.0 L243.6 211.4"/>
+
+  <g class="text">
+    <text x="438" y="142">l</text>
+    <text x="128" y="260">Q₁</text>
+    <text x="318" y="190">Q₂</text>
+    <text x="258" y="220">H</text>
+    <text x="214" y="244" fill="#2563eb">v</text>
+    <text x="180" y="74" fill="#dc2626">n = (A, B)</text>
+    <text x="496" y="214">x</text>
+    <text x="286" y="36">y</text>
+    <text x="286" y="230">O</text>
+  </g>
+
+  <rect class="note" x="502" y="82" width="340" height="250" rx="18"/>
+  <text class="highlight" x="612" y="116">看图顺序</text>
+  <text class="small" x="530" y="152">1. Q₁、Q₂ 都在直线 l 上</text>
+  <text class="small" x="530" y="182">2. 方向向量可以写成 v = (x₂-x₁, y₂-y₁)</text>
+  <text class="small" x="530" y="212">3. 由直线方程相减，可得：</text>
+  <text class="formula" x="530" y="248">A(x₂-x₁) + B(y₂-y₁) = 0</text>
+  <text class="small" x="530" y="282">4. 也就是：</text>
+  <text class="formula" x="530" y="314">(A, B) · v = 0</text>
+  <text class="small" x="530" y="348">数量积为 0，说明 n = (A, B) 与直线方向垂直。</text>
+</svg>

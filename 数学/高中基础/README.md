@@ -7,7 +7,7 @@
 
 先看整体使用路线：
 
-![高中基础学习流程图](../diagram-study-workflow.svg)
+![高中基础学习流程图](../svg/diagram-study-workflow.svg)
 
 这张图对应的核心顺序是：
 

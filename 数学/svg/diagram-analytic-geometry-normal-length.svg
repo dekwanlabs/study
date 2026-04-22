@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="420" viewBox="0 0 940 420">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 2.6; }
+      .vector { stroke: #0f766e; stroke-width: 4; }
+      .legA { stroke: #2563eb; stroke-width: 3; }
+      .legB { stroke: #dc2626; stroke-width: 3; }
+      .point { fill: #ea580c; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #475569;
+      }
+      .formula {
+        font-family: "Times New Roman", "Cambria Math", serif;
+        font-size: 22px;
+        fill: #0f172a;
+      }
+      .highlight {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #0f766e;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#0f766e"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="940" height="420" rx="18"/>
+  <text class="title" x="34" y="42">法向量长度为什么是 √(A² + B²)</text>
+
+  <g class="grid">
+    <line x1="78" y1="88" x2="458" y2="88"/>
+    <line x1="78" y1="148" x2="458" y2="148"/>
+    <line x1="78" y1="208" x2="458" y2="208"/>
+    <line x1="78" y1="268" x2="458" y2="268"/>
+    <line x1="78" y1="328" x2="458" y2="328"/>
+    <line x1="98" y1="68" x2="98" y2="348"/>
+    <line x1="158" y1="68" x2="158" y2="348"/>
+    <line x1="218" y1="68" x2="218" y2="348"/>
+    <line x1="278" y1="68" x2="278" y2="348"/>
+    <line x1="338" y1="68" x2="338" y2="348"/>
+    <line x1="398" y1="68" x2="398" y2="348"/>
+  </g>
+
+  <line class="axis" x1="48" y1="300" x2="488" y2="300" marker-end="url(#arrow)"/>
+  <line class="axis" x1="170" y1="368" x2="170" y2="38" marker-end="url(#arrow)"/>
+
+  <line class="legA" x1="170" y1="300" x2="350" y2="300"/>
+  <line class="legB" x1="350" y1="300" x2="350" y2="120"/>
+  <line class="vector" x1="170" y1="300" x2="350" y2="120" marker-end="url(#arrowGreen)"/>
+  <circle class="point" cx="350" cy="120" r="6"/>
+
+  <g class="text">
+    <text x="358" y="114">M(A, B)</text>
+    <text x="178" y="292">O</text>
+    <text x="248" y="292" fill="#2563eb">A</text>
+    <text x="358" y="216" fill="#dc2626">B</text>
+    <text x="246" y="198" fill="#0f766e">|n|</text>
+    <text x="360" y="316">A</text>
+    <text x="150" y="208">B</text>
+    <text x="496" y="306">x</text>
+    <text x="178" y="36">y</text>
+  </g>
+
+  <rect class="note" x="520" y="92" width="318" height="220" rx="18"/>
+  <text class="highlight" x="628" y="126">看图顺序</text>
+  <text class="small" x="548" y="160">1. n = (A, B) 可以看成从原点到点 M(A, B)</text>
+  <text class="small" x="548" y="192">2. 横向变化量是 A，纵向变化量是 B</text>
+  <text class="small" x="548" y="224">3. 所以它和坐标轴围成一个直角三角形</text>
+  <text class="small" x="548" y="256">4. 斜边就是向量长度 |n|</text>
+  <text class="formula" x="548" y="294">|n| = √(A² + B²)</text>
+</svg>
