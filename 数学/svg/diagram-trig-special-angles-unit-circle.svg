@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .axis { stroke: #334155; stroke-width: 3; }
+      .circle { fill: none; stroke: #0f766e; stroke-width: 3.5; }
+      .wedge { fill: #dcfce7; opacity: 0.72; }
+      .ray { stroke: #dc2626; stroke-width: 2.5; opacity: 0.55; }
+      .guide { stroke: #94a3b8; stroke-width: 1.5; stroke-dasharray: 6 5; }
+      .callout { stroke: #94a3b8; stroke-width: 1.8; fill: none; }
+      .point { fill: #dc2626; }
+      .box { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.6; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .label {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+        fill: #0f766e;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        fill: #475569;
+      }
+      .formula {
+        font-family: "Times New Roman", "Cambria Math", "STIX Two Math", "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", serif;
+        font-size: 18px;
+        fill: #0f172a;
+      }
+      .highlight {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #0f766e;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="980" height="560" rx="18"/>
+  <text class="title" x="34" y="44">把特殊角表放回单位圆里看</text>
+
+  <path class="wedge" d="M280 300 L460 300 A180 180 0 0 0 280 120 Z"/>
+
+  <line class="axis" x1="52" y1="300" x2="520" y2="300" marker-end="url(#arrow)"/>
+  <line class="axis" x1="280" y1="500" x2="280" y2="62" marker-end="url(#arrow)"/>
+  <circle class="circle" cx="280" cy="300" r="180"/>
+
+  <line class="ray" x1="280" y1="300" x2="460" y2="300"/>
+  <line class="ray" x1="280" y1="300" x2="435.885" y2="210"/>
+  <line class="ray" x1="280" y1="300" x2="407.279" y2="172.721"/>
+  <line class="ray" x1="280" y1="300" x2="370" y2="144.115"/>
+  <line class="ray" x1="280" y1="300" x2="280" y2="120"/>
+
+  <line class="guide" x1="435.885" y1="210" x2="435.885" y2="300"/>
+  <line class="guide" x1="407.279" y1="172.721" x2="407.279" y2="300"/>
+  <line class="guide" x1="370" y1="144.115" x2="370" y2="300"/>
+  <line class="guide" x1="280" y1="120" x2="280" y2="300"/>
+
+  <g class="point">
+    <circle cx="460" cy="300" r="5.5"/>
+    <circle cx="435.885" cy="210" r="5.5"/>
+    <circle cx="407.279" cy="172.721" r="5.5"/>
+    <circle cx="370" cy="144.115" r="5.5"/>
+    <circle cx="280" cy="120" r="5.5"/>
+    <circle cx="280" cy="300" r="4.5" fill="#0f172a"/>
+  </g>
+
+  <g class="text">
+    <text x="528" y="307">x</text>
+    <text x="288" y="60">y</text>
+    <text x="290" y="323">O</text>
+    <text x="470" y="294">1</text>
+    <text x="287" y="110">1</text>
+    <text x="332" y="188">第一象限</text>
+  </g>
+
+  <path class="callout" d="M280 120 L280 112"/>
+  <rect class="box" x="195" y="56" width="170" height="56" rx="12"/>
+  <text class="label" x="214" y="80">π/2</text>
+  <text class="formula" x="214" y="102">(0, 1)</text>
+
+  <path class="callout" d="M370 144.115 L370 136 L392 136"/>
+  <rect class="box" x="392" y="82" width="176" height="56" rx="12"/>
+  <text class="label" x="410" y="106">π/3</text>
+  <text class="formula" x="410" y="128">(1/2, √3/2)</text>
+
+  <path class="callout" d="M407.279 172.721 L442 172.721"/>
+  <rect class="box" x="442" y="144" width="176" height="56" rx="12"/>
+  <text class="label" x="460" y="168">π/4</text>
+  <text class="formula" x="460" y="190">(√2/2, √2/2)</text>
+
+  <path class="callout" d="M435.885 210 L470 210"/>
+  <rect class="box" x="470" y="182" width="176" height="56" rx="12"/>
+  <text class="label" x="488" y="206">π/6</text>
+  <text class="formula" x="488" y="228">(√3/2, 1/2)</text>
+
+  <path class="callout" d="M460 300 L472 312"/>
+  <rect class="box" x="424" y="318" width="156" height="56" rx="12"/>
+  <text class="label" x="442" y="342">0</text>
+  <text class="formula" x="442" y="364">(1, 0)</text>
+
+  <rect class="note" x="658" y="78" width="282" height="390" rx="18"/>
+  <text class="highlight" x="680" y="112">看这张图只抓 3 件事</text>
+
+  <text class="small" x="680" y="150">1. 角从 0 增到 π/2，点沿圆弧往上走。</text>
+  <text class="small" x="680" y="178">2. 横坐标越来越小，所以 cos 由 1 变到 0。</text>
+  <text class="small" x="680" y="206">3. 纵坐标越来越大，所以 sin 由 0 变到 1。</text>
+
+  <text class="highlight" x="680" y="252">和上面表格怎么对应</text>
+  <text class="formula" x="680" y="290">sin: 0 → 1/2 → √2/2 → √3/2 → 1</text>
+  <text class="formula" x="680" y="324">cos: 1 → √3/2 → √2/2 → 1/2 → 0</text>
+  <text class="formula" x="680" y="358">tan: 0 → √3/3 → 1 → √3 → 不存在</text>
+
+  <text class="highlight" x="680" y="404">一句最稳的记法</text>
+  <text class="small" x="680" y="438">先记单位圆上的点坐标，</text>
+  <text class="small" x="680" y="462">再用 “横坐标是 cos，纵坐标是 sin”。</text>
+</svg>

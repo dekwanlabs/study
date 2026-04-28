@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 2.4; }
+      .circle { fill: none; stroke: #0f766e; stroke-width: 3; }
+      .ray { stroke: #dc2626; stroke-width: 3.2; }
+      .guideX { stroke: #16a34a; stroke-width: 1.8; stroke-dasharray: 6 5; }
+      .guideY { stroke: #2563eb; stroke-width: 1.8; stroke-dasharray: 6 5; }
+      .arcTheta { fill: none; stroke: #7c3aed; stroke-width: 2.2; }
+      .arcComp { fill: none; stroke: #f59e0b; stroke-width: 2.2; }
+      .panel { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        fill: #475569;
+      }
+      .math {
+        font-family: "Times New Roman", "Cambria Math", "STIX Two Math", "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", serif;
+        font-size: 20px;
+        fill: #0f172a;
+      }
+      .highlight {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #0f766e;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="980" height="560" rx="18"/>
+  <text class="title" x="34" y="44">正弦和角公式这一步，关键是先把 sin 看成 cos 的余角</text>
+
+  <g class="grid">
+    <line x1="86" y1="128" x2="466" y2="128"/>
+    <line x1="86" y1="192" x2="466" y2="192"/>
+    <line x1="86" y1="320" x2="466" y2="320"/>
+    <line x1="86" y1="384" x2="466" y2="384"/>
+    <line x1="128" y1="86" x2="128" y2="426"/>
+    <line x1="192" y1="86" x2="192" y2="426"/>
+    <line x1="320" y1="86" x2="320" y2="426"/>
+    <line x1="384" y1="86" x2="384" y2="426"/>
+    <line x1="448" y1="86" x2="448" y2="426"/>
+  </g>
+
+  <line class="axis" x1="54" y1="256" x2="500" y2="256" marker-end="url(#arrow)"/>
+  <line class="axis" x1="256" y1="458" x2="256" y2="54" marker-end="url(#arrow)"/>
+  <circle class="circle" cx="256" cy="256" r="140"/>
+
+  <line class="ray" x1="256" y1="256" x2="370" y2="175"/>
+  <line class="guideX" x1="370" y1="175" x2="370" y2="256"/>
+  <line class="guideY" x1="370" y1="175" x2="256" y2="175"/>
+  <circle cx="370" cy="175" r="5.5" fill="#dc2626"/>
+
+  <path class="arcTheta" d="M310 256 A54 54 0 0 0 302 226"/>
+  <path class="arcComp" d="M256 196 A60 60 0 0 1 306 223"/>
+
+  <g class="text">
+    <text x="508" y="262">x</text>
+    <text x="264" y="52">y</text>
+    <text x="264" y="278">O</text>
+    <text x="376" y="170">P(cos(α+β), sin(α+β))</text>
+    <text x="307" y="224" fill="#7c3aed">α+β</text>
+    <text x="278" y="210" fill="#f59e0b">π/2-(α+β)</text>
+    <text x="380" y="250" fill="#16a34a">cos(α+β)</text>
+    <text x="266" y="170" fill="#2563eb">sin(α+β)</text>
+  </g>
+
+  <rect class="panel" x="544" y="82" width="392" height="392" rx="18"/>
+  <text class="highlight" x="568" y="118">图上要看的是同一个点 P</text>
+
+  <text class="small" x="568" y="158">从正 x 轴量到 OP，角是：</text>
+  <text class="math" x="568" y="190">α + β</text>
+
+  <text class="small" x="568" y="234">所以点 P 的纵坐标就是：</text>
+  <text class="math" x="568" y="266">sin(α + β)</text>
+
+  <text class="small" x="568" y="310">但如果改从正 y 轴往右看，</text>
+  <text class="small" x="568" y="334">到同一条射线 OP 的夹角就是：</text>
+  <text class="math" x="568" y="366">π/2 - (α + β)</text>
+
+  <text class="small" x="568" y="410">这时读的是“邻边比斜边”，也就是余弦：</text>
+  <text class="math" x="568" y="442">sin(α + β) = cos(π/2 - (α + β))</text>
+</svg>

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 2.6; }
+      .circle { fill: none; stroke: #0f766e; stroke-width: 3; }
+      .rayA { stroke: #dc2626; stroke-width: 3; }
+      .rayB { stroke: #2563eb; stroke-width: 3; }
+      .arcA { fill: none; stroke: #7c3aed; stroke-width: 2.2; }
+      .arcB { fill: none; stroke: #f59e0b; stroke-width: 2.2; }
+      .guide { stroke: #94a3b8; stroke-width: 1.8; stroke-dasharray: 6 5; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        fill: #475569;
+      }
+      .math {
+        font-family: "Times New Roman", "Cambria Math", "STIX Two Math", "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", serif;
+        font-size: 20px;
+        fill: #0f172a;
+      }
+      .highlight {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #0f766e;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="980" height="560" rx="18"/>
+  <text class="title" x="34" y="44">和角公式：把角 α 再转一个 β，会落到 α+β</text>
+
+  <g class="grid">
+    <line x1="86" y1="128" x2="466" y2="128"/>
+    <line x1="86" y1="192" x2="466" y2="192"/>
+    <line x1="86" y1="320" x2="466" y2="320"/>
+    <line x1="86" y1="384" x2="466" y2="384"/>
+    <line x1="128" y1="86" x2="128" y2="426"/>
+    <line x1="192" y1="86" x2="192" y2="426"/>
+    <line x1="320" y1="86" x2="320" y2="426"/>
+    <line x1="384" y1="86" x2="384" y2="426"/>
+    <line x1="448" y1="86" x2="448" y2="426"/>
+  </g>
+
+  <line class="axis" x1="54" y1="256" x2="500" y2="256" marker-end="url(#arrow)"/>
+  <line class="axis" x1="256" y1="458" x2="256" y2="54" marker-end="url(#arrow)"/>
+  <circle class="circle" cx="256" cy="256" r="140"/>
+
+  <line class="rayA" x1="256" y1="256" x2="377" y2="186"/>
+  <line class="rayB" x1="256" y1="256" x2="340" y2="144"/>
+  <line class="guide" x1="377" y1="186" x2="377" y2="256"/>
+  <line class="guide" x1="340" y1="144" x2="340" y2="256"/>
+
+  <circle cx="377" cy="186" r="5.5" fill="#dc2626"/>
+  <circle cx="340" cy="144" r="5.5" fill="#2563eb"/>
+
+  <path class="arcA" d="M302 256 A46 46 0 0 0 296 234"/>
+  <path class="arcB" d="M318 220 A72 72 0 0 0 343 194"/>
+
+  <g class="text">
+    <text x="508" y="262">x</text>
+    <text x="264" y="52">y</text>
+    <text x="263" y="278">O</text>
+    <text x="383" y="180">A(cos α, sin α)</text>
+    <text x="346" y="136">B(cos(α+β), sin(α+β))</text>
+    <text x="304" y="233">α</text>
+    <text x="344" y="196">β</text>
+  </g>
+
+  <rect class="note" x="544" y="82" width="378" height="390" rx="18"/>
+  <text class="highlight" x="568" y="118">推导主线</text>
+  <text class="small" x="568" y="154">先把点 A 看成两个单位方向的组合：</text>
+  <text class="math" x="568" y="188">(x, y) = x(1, 0) + y(0, 1)</text>
+
+  <text class="small" x="568" y="228">把整个图形逆时针转 β：</text>
+  <text class="math" x="568" y="262">(1, 0) → (cos β, sin β)</text>
+  <text class="math" x="568" y="296">(0, 1) → (-sin β, cos β)</text>
+
+  <text class="small" x="568" y="338">所以旋转后的坐标是：</text>
+  <text class="math" x="568" y="372">(x', y') = (x cos β - y sin β,</text>
+  <text class="math" x="568" y="402">          x sin β + y cos β)</text>
+
+  <text class="small" x="568" y="444">再令 x = cos α，y = sin α，</text>
+  <text class="small" x="568" y="468">就得到 sin(α+β)、cos(α+β) 的公式。</text>
+</svg>

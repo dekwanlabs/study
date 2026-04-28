@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 2.4; }
+      .circle { fill: none; stroke: #0f766e; stroke-width: 3; }
+      .rayX { stroke: #dc2626; stroke-width: 3.2; }
+      .ray2X { stroke: #2563eb; stroke-width: 3.2; }
+      .arcX { fill: none; stroke: #7c3aed; stroke-width: 2.2; }
+      .arc2X { fill: none; stroke: #f59e0b; stroke-width: 2.2; }
+      .guide { stroke: #94a3b8; stroke-width: 1.8; stroke-dasharray: 6 5; }
+      .panel { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        fill: #475569;
+      }
+      .math {
+        font-family: "Times New Roman", "Cambria Math", "STIX Two Math", "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", serif;
+        font-size: 20px;
+        fill: #0f172a;
+      }
+      .highlight {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #0f766e;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="980" height="560" rx="18"/>
+  <text class="title" x="34" y="44">二倍角：本质上就是“连续转两次 x”，所以总角变成 2x</text>
+
+  <g class="grid">
+    <line x1="86" y1="128" x2="466" y2="128"/>
+    <line x1="86" y1="192" x2="466" y2="192"/>
+    <line x1="86" y1="320" x2="466" y2="320"/>
+    <line x1="86" y1="384" x2="466" y2="384"/>
+    <line x1="128" y1="86" x2="128" y2="426"/>
+    <line x1="192" y1="86" x2="192" y2="426"/>
+    <line x1="320" y1="86" x2="320" y2="426"/>
+    <line x1="384" y1="86" x2="384" y2="426"/>
+    <line x1="448" y1="86" x2="448" y2="426"/>
+  </g>
+
+  <line class="axis" x1="54" y1="256" x2="500" y2="256" marker-end="url(#arrow)"/>
+  <line class="axis" x1="256" y1="458" x2="256" y2="54" marker-end="url(#arrow)"/>
+  <circle class="circle" cx="256" cy="256" r="140"/>
+
+  <line class="rayX" x1="256" y1="256" x2="367" y2="170"/>
+  <line class="ray2X" x1="256" y1="256" x2="338" y2="142"/>
+  <line class="guide" x1="367" y1="170" x2="367" y2="256"/>
+  <line class="guide" x1="338" y1="142" x2="338" y2="256"/>
+
+  <circle cx="367" cy="170" r="5.5" fill="#dc2626"/>
+  <circle cx="338" cy="142" r="5.5" fill="#2563eb"/>
+  <path class="arcX" d="M304 256 A48 48 0 0 0 298 230"/>
+  <path class="arc2X" d="M316 256 A60 60 0 0 0 304 214"/>
+
+  <g class="text">
+    <text x="508" y="262">x</text>
+    <text x="264" y="52">y</text>
+    <text x="264" y="278">O</text>
+    <text x="372" y="164">A(cos x, sin x)</text>
+    <text x="344" y="136">B(cos 2x, sin 2x)</text>
+    <text x="300" y="232">x</text>
+    <text x="310" y="212">2x</text>
+  </g>
+
+  <rect class="panel" x="544" y="82" width="392" height="392" rx="18"/>
+  <text class="highlight" x="568" y="118">顺着和角公式往下代</text>
+
+  <text class="small" x="568" y="158">把两次转动看成 x + x：</text>
+  <text class="math" x="568" y="194">sin 2x = sin(x + x)</text>
+  <text class="math" x="568" y="226">cos 2x = cos(x + x)</text>
+
+  <text class="small" x="568" y="270">于是直接把和角公式里的 α, β 都换成 x：</text>
+  <text class="math" x="568" y="306">sin 2x = sin x cos x + cos x sin x</text>
+  <text class="math" x="568" y="338">       = 2 sin x cos x</text>
+
+  <text class="math" x="568" y="384">cos 2x = cos²x - sin²x</text>
+  <text class="math" x="568" y="416">       = 2cos²x - 1</text>
+  <text class="math" x="568" y="448">       = 1 - 2sin²x</text>
+</svg>

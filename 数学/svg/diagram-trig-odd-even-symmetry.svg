@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="480" viewBox="0 0 880 480">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 2.6; }
+      .circle { fill: none; stroke: #0f766e; stroke-width: 3; }
+      .rayPos { stroke: #dc2626; stroke-width: 3; }
+      .rayNeg { stroke: #2563eb; stroke-width: 3; }
+      .guide { stroke: #94a3b8; stroke-width: 1.8; stroke-dasharray: 6 5; }
+      .arcPos { fill: none; stroke: #7c3aed; stroke-width: 2.2; }
+      .arcNeg { fill: none; stroke: #f59e0b; stroke-width: 2.2; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        fill: #475569;
+      }
+      .math {
+        font-family: "Times New Roman", "Cambria Math", "STIX Two Math", "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", serif;
+        font-size: 20px;
+        fill: #0f172a;
+      }
+      .highlight {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #0f766e;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="880" height="480" rx="18"/>
+  <text class="title" x="34" y="44">单位圆里看奇偶性：x 和 -x 为什么一个变号、一个不变</text>
+
+  <g class="grid">
+    <line x1="80" y1="120" x2="440" y2="120"/>
+    <line x1="80" y1="180" x2="440" y2="180"/>
+    <line x1="80" y1="300" x2="440" y2="300"/>
+    <line x1="80" y1="360" x2="440" y2="360"/>
+    <line x1="120" y1="80" x2="120" y2="400"/>
+    <line x1="180" y1="80" x2="180" y2="400"/>
+    <line x1="300" y1="80" x2="300" y2="400"/>
+    <line x1="360" y1="80" x2="360" y2="400"/>
+    <line x1="420" y1="80" x2="420" y2="400"/>
+  </g>
+
+  <line class="axis" x1="48" y1="240" x2="470" y2="240" marker-end="url(#arrow)"/>
+  <line class="axis" x1="240" y1="420" x2="240" y2="48" marker-end="url(#arrow)"/>
+  <circle class="circle" cx="240" cy="240" r="120"/>
+
+  <line class="rayPos" x1="240" y1="240" x2="330" y2="170"/>
+  <line class="rayNeg" x1="240" y1="240" x2="330" y2="310"/>
+  <line class="guide" x1="330" y1="170" x2="330" y2="310"/>
+  <line class="guide" x1="240" y1="170" x2="330" y2="170"/>
+  <line class="guide" x1="240" y1="310" x2="330" y2="310"/>
+
+  <path class="arcPos" d="M280 240 A40 40 0 0 0 271 216"/>
+  <path class="arcNeg" d="M280 240 A40 40 0 0 1 271 264"/>
+
+  <circle cx="330" cy="170" r="5.5" fill="#dc2626"/>
+  <circle cx="330" cy="310" r="5.5" fill="#2563eb"/>
+
+  <g class="text">
+    <text x="478" y="246">x</text>
+    <text x="248" y="44">y</text>
+    <text x="246" y="262">O</text>
+    <text x="337" y="166">P(cos x, sin x)</text>
+    <text x="337" y="330">Q(cos x, -sin x)</text>
+    <text x="284" y="212">x</text>
+    <text x="280" y="286">-x</text>
+  </g>
+
+  <rect class="note" x="500" y="78" width="332" height="320" rx="18"/>
+  <text class="highlight" x="524" y="114">看图抓住两件事</text>
+  <text class="small" x="524" y="150">1. 角 x 和角 -x 关于 x 轴对称。</text>
+  <text class="small" x="524" y="178">2. 关于 x 轴对称时，横坐标不变，纵坐标变号。</text>
+
+  <text class="highlight" x="524" y="228">所以</text>
+  <text class="math" x="524" y="268">cos(-x) = cos x</text>
+  <text class="math" x="524" y="302">sin(-x) = -sin x</text>
+  <text class="math" x="524" y="336">tan(-x) = -tan x</text>
+
+  <text class="small" x="524" y="374">最后一条是因为</text>
+  <text class="math" x="524" y="404">tan(-x) = sin(-x) / cos(-x)</text>
+</svg>

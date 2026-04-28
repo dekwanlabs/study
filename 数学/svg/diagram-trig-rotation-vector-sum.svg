@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .panel { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 2.4; }
+      .vec1 { stroke: #dc2626; stroke-width: 3.4; }
+      .vec2 { stroke: #2563eb; stroke-width: 3.4; }
+      .result { stroke: #0f766e; stroke-width: 3.2; }
+      .dash { stroke: #94a3b8; stroke-width: 1.6; stroke-dasharray: 6 5; fill: none; }
+      .arcA { fill: none; stroke: #7c3aed; stroke-width: 2.2; }
+      .arcB { fill: none; stroke: #f59e0b; stroke-width: 2.2; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .panelTitle {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        fill: #475569;
+      }
+      .math {
+        font-family: "Times New Roman", "Cambria Math", "STIX Two Math", "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", serif;
+        font-size: 20px;
+        fill: #0f172a;
+      }
+      .highlight {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #0f766e;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#0f766e"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="980" height="560" rx="18"/>
+  <text class="title" x="34" y="44">x(…) + y(…) 的意思：原来有两段，旋转后还是这两段，只是方向变了</text>
+
+  <rect class="panel" x="34" y="82" width="430" height="350" rx="18"/>
+  <rect class="panel" x="516" y="82" width="430" height="350" rx="18"/>
+  <rect class="note" x="96" y="456" width="788" height="72" rx="16"/>
+
+  <!-- Left panel: original decomposition -->
+  <g transform="translate(34 82)">
+    <text class="panelTitle" x="24" y="34">旋转前：先走长度 x，再走长度 y</text>
+
+    <g class="grid">
+      <line x1="80" y1="90" x2="360" y2="90"/>
+      <line x1="80" y1="150" x2="360" y2="150"/>
+      <line x1="80" y1="270" x2="360" y2="270"/>
+      <line x1="80" y1="330" x2="360" y2="330"/>
+      <line x1="100" y1="70" x2="100" y2="350"/>
+      <line x1="160" y1="70" x2="160" y2="350"/>
+      <line x1="280" y1="70" x2="280" y2="350"/>
+      <line x1="340" y1="70" x2="340" y2="350"/>
+    </g>
+
+    <line class="axis" x1="40" y1="210" x2="390" y2="210" marker-end="url(#arrow)"/>
+    <line class="axis" x1="120" y1="370" x2="120" y2="40" marker-end="url(#arrow)"/>
+
+    <line class="vec1" x1="120" y1="210" x2="280" y2="210" marker-end="url(#arrowRed)"/>
+    <line class="vec2" x1="280" y1="210" x2="280" y2="110" marker-end="url(#arrowBlue)"/>
+    <line class="result" x1="120" y1="210" x2="280" y2="110" marker-end="url(#arrowGreen)"/>
+    <path class="dash" d="M120 110 L280 110"/>
+
+    <circle cx="120" cy="210" r="4.5" fill="#0f172a"/>
+    <circle cx="280" cy="210" r="4.5" fill="#dc2626"/>
+    <circle cx="280" cy="110" r="5.5" fill="#0f766e"/>
+
+    <g class="text">
+      <text x="396" y="216">x</text>
+      <text x="128" y="40">y</text>
+      <text x="128" y="228">O</text>
+      <text x="288" y="106">P(x,y)</text>
+      <text x="176" y="202">第一段：长度 x</text>
+      <text x="288" y="168">第二段：长度 y</text>
+      <text x="170" y="150">(x,0)</text>
+    </g>
+  </g>
+
+  <!-- Right panel: rotated decomposition -->
+  <g transform="translate(516 82)">
+    <text class="panelTitle" x="24" y="34">旋转后：还是这两段，只是方向改了</text>
+
+    <g class="grid">
+      <line x1="80" y1="90" x2="360" y2="90"/>
+      <line x1="80" y1="150" x2="360" y2="150"/>
+      <line x1="80" y1="270" x2="360" y2="270"/>
+      <line x1="80" y1="330" x2="360" y2="330"/>
+      <line x1="100" y1="70" x2="100" y2="350"/>
+      <line x1="160" y1="70" x2="160" y2="350"/>
+      <line x1="280" y1="70" x2="280" y2="350"/>
+      <line x1="340" y1="70" x2="340" y2="350"/>
+    </g>
+
+    <line class="axis" x1="40" y1="210" x2="390" y2="210" marker-end="url(#arrow)"/>
+    <line class="axis" x1="120" y1="370" x2="120" y2="40" marker-end="url(#arrow)"/>
+
+    <line class="vec1" x1="120" y1="210" x2="263" y2="145" marker-end="url(#arrowRed)"/>
+    <line class="vec2" x1="263" y1="145" x2="218" y2="45" marker-end="url(#arrowBlue)"/>
+    <line class="result" x1="120" y1="210" x2="218" y2="45" marker-end="url(#arrowGreen)"/>
+    <path class="dash" d="M120 110 L263 145"/>
+    <path class="dash" d="M120 210 L75 110"/>
+    <path class="arcA" d="M160 210 A40 40 0 0 0 156 191"/>
+    <path class="arcB" d="M263 105 A40 40 0 0 1 244 111"/>
+
+    <circle cx="120" cy="210" r="4.5" fill="#0f172a"/>
+    <circle cx="263" cy="145" r="4.5" fill="#dc2626"/>
+    <circle cx="218" cy="45" r="5.5" fill="#0f766e"/>
+
+    <g class="text">
+      <text x="396" y="216">x</text>
+      <text x="128" y="40">y</text>
+      <text x="128" y="228">O</text>
+      <text x="226" y="41">P'(x',y')</text>
+      <text x="176" y="166">长度 x，方向 β</text>
+      <text x="276" y="88">长度 y，方向 π/2+β</text>
+      <text x="190" y="108">先到 A</text>
+      <text x="150" y="194">β</text>
+      <text x="244" y="112">β</text>
+      <text x="132" y="252" fill="#dc2626">x(cosβ, sinβ)</text>
+      <text x="245" y="30" fill="#2563eb">y(-sinβ, cosβ)</text>
+    </g>
+  </g>
+
+  <text class="highlight" x="128" y="486">最关键的一句：</text>
+  <text class="small" x="236" y="486">旋转以后，不是直接去算 x 和 y；而是把原来那两段位移各自转过去，再把两段新位移首尾相接地加起来。</text>
+</svg>

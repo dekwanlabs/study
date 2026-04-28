@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 2.6; }
+      .circle { fill: none; stroke: #0f766e; stroke-width: 3; }
+      .ray { stroke: #2563eb; stroke-width: 3.2; }
+      .guideX { stroke: #16a34a; stroke-width: 1.8; stroke-dasharray: 6 5; }
+      .guideY { stroke: #2563eb; stroke-width: 1.8; stroke-dasharray: 6 5; }
+      .arcMain { fill: none; stroke: #7c3aed; stroke-width: 2.2; }
+      .arcBeta { fill: none; stroke: #f59e0b; stroke-width: 2.2; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        fill: #475569;
+      }
+      .math {
+        font-family: "Times New Roman", "Cambria Math", "STIX Two Math", "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", serif;
+        font-size: 20px;
+        fill: #0f172a;
+      }
+      .highlight {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #0f766e;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="900" height="500" rx="18"/>
+  <text class="title" x="34" y="44">角 π/2+β 为什么对应点 (-sinβ, cosβ)</text>
+
+  <g class="grid">
+    <line x1="80" y1="120" x2="440" y2="120"/>
+    <line x1="80" y1="180" x2="440" y2="180"/>
+    <line x1="80" y1="300" x2="440" y2="300"/>
+    <line x1="80" y1="360" x2="440" y2="360"/>
+    <line x1="120" y1="80" x2="120" y2="400"/>
+    <line x1="180" y1="80" x2="180" y2="400"/>
+    <line x1="300" y1="80" x2="300" y2="400"/>
+    <line x1="360" y1="80" x2="360" y2="400"/>
+    <line x1="420" y1="80" x2="420" y2="400"/>
+  </g>
+
+  <line class="axis" x1="48" y1="240" x2="470" y2="240" marker-end="url(#arrow)"/>
+  <line class="axis" x1="240" y1="420" x2="240" y2="48" marker-end="url(#arrow)"/>
+  <circle class="circle" cx="240" cy="240" r="120"/>
+
+  <line class="ray" x1="240" y1="240" x2="171" y2="142"/>
+  <line class="guideX" x1="171" y1="142" x2="240" y2="142"/>
+  <line class="guideY" x1="171" y1="142" x2="171" y2="240"/>
+
+  <circle cx="171" cy="142" r="5.5" fill="#2563eb"/>
+  <path class="arcMain" d="M280 240 A40 40 0 0 1 240 200"/>
+  <path class="arcMain" d="M240 200 A40 40 0 0 0 216 208"/>
+  <path class="arcBeta" d="M240 190 A50 50 0 0 0 210 198"/>
+
+  <g class="text">
+    <text x="478" y="246">x</text>
+    <text x="248" y="46">y</text>
+    <text x="248" y="262">O</text>
+    <text x="120" y="136">P(-sin β, cos β)</text>
+    <text x="251" y="188">π/2 + β</text>
+    <text x="207" y="192">β</text>
+    <text x="182" y="260" fill="#16a34a">-sin β</text>
+    <text x="247" y="154" fill="#2563eb">cos β</text>
+  </g>
+
+  <rect class="note" x="520" y="88" width="320" height="300" rx="18"/>
+  <text class="highlight" x="544" y="124">看图的顺序</text>
+  <text class="small" x="544" y="160">1. 从正 x 轴转到正 y 轴，是 π/2。</text>
+  <text class="small" x="544" y="188">2. 再往第二象限多转一个 β，</text>
+  <text class="small" x="544" y="212">   总角就是 π/2+β。</text>
+  <text class="small" x="544" y="250">3. 点落在第二象限，所以：</text>
+  <text class="small" x="544" y="278">   横坐标为负，纵坐标为正。</text>
+  <text class="small" x="544" y="316">4. 参考角是 β，所以横向长度是 sinβ，</text>
+  <text class="small" x="544" y="340">   竖向长度是 cosβ。</text>
+  <text class="math" x="544" y="378">P = (-sin β, cos β)</text>
+</svg>

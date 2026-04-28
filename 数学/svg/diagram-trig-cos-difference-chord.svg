@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 2.4; }
+      .circle { fill: none; stroke: #0f766e; stroke-width: 3; }
+      .rayA { stroke: #dc2626; stroke-width: 3.2; }
+      .rayB { stroke: #2563eb; stroke-width: 3.2; }
+      .chord { stroke: #f59e0b; stroke-width: 3; }
+      .guide { stroke: #94a3b8; stroke-width: 1.8; stroke-dasharray: 6 5; }
+      .arcAlpha { fill: none; stroke: #dc2626; stroke-width: 2.2; }
+      .arcBeta { fill: none; stroke: #2563eb; stroke-width: 2.2; }
+      .arcMain { fill: none; stroke: #7c3aed; stroke-width: 2.2; }
+      .panel { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        fill: #475569;
+      }
+      .math {
+        font-family: "Times New Roman", "Cambria Math", "STIX Two Math", "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", serif;
+        font-size: 20px;
+        fill: #0f172a;
+      }
+      .highlight {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #0f766e;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="980" height="560" rx="18"/>
+  <text class="title" x="34" y="44">余弦差角公式：同一条弦 AB，可以从“夹角”算，也可以从“坐标差”算</text>
+
+  <g class="grid">
+    <line x1="86" y1="128" x2="466" y2="128"/>
+    <line x1="86" y1="192" x2="466" y2="192"/>
+    <line x1="86" y1="320" x2="466" y2="320"/>
+    <line x1="86" y1="384" x2="466" y2="384"/>
+    <line x1="128" y1="86" x2="128" y2="426"/>
+    <line x1="192" y1="86" x2="192" y2="426"/>
+    <line x1="320" y1="86" x2="320" y2="426"/>
+    <line x1="384" y1="86" x2="384" y2="426"/>
+    <line x1="448" y1="86" x2="448" y2="426"/>
+  </g>
+
+  <line class="axis" x1="54" y1="256" x2="500" y2="256" marker-end="url(#arrow)"/>
+  <line class="axis" x1="256" y1="458" x2="256" y2="54" marker-end="url(#arrow)"/>
+  <circle class="circle" cx="256" cy="256" r="140"/>
+
+  <line class="rayA" x1="256" y1="256" x2="328" y2="136"/>
+  <line class="rayB" x1="256" y1="256" x2="374" y2="181"/>
+  <line class="chord" x1="328" y1="136" x2="374" y2="181"/>
+  <line class="guide" x1="328" y1="136" x2="328" y2="256"/>
+  <line class="guide" x1="328" y1="136" x2="256" y2="136"/>
+  <line class="guide" x1="374" y1="181" x2="374" y2="256"/>
+
+  <circle cx="328" cy="136" r="5.5" fill="#dc2626"/>
+  <circle cx="374" cy="181" r="5.5" fill="#2563eb"/>
+  <path class="arcAlpha" d="M338 256 A82 82 0 0 0 298 186"/>
+  <path class="arcBeta" d="M312 256 A58 58 0 0 0 305 225"/>
+  <path class="arcMain" d="M313 220 A68 68 0 0 0 291 198"/>
+
+  <g class="text">
+    <text x="508" y="262">x</text>
+    <text x="264" y="52">y</text>
+    <text x="264" y="278">O</text>
+    <text x="334" y="130">A(cos α, sin α)</text>
+    <text x="380" y="176">B(cos β, sin β)</text>
+    <text x="307" y="182" fill="#dc2626">α</text>
+    <text x="300" y="226" fill="#2563eb">β</text>
+    <text x="292" y="205">α-β</text>
+    <text x="346" y="160">AB</text>
+    <text x="333" y="272" fill="#16a34a">cos α</text>
+    <text x="380" y="250" fill="#16a34a">cos β</text>
+    <text x="262" y="130" fill="#2563eb">sin α</text>
+  </g>
+
+  <rect class="panel" x="544" y="82" width="392" height="392" rx="18"/>
+  <text class="highlight" x="568" y="118">同一条弦，算两次</text>
+
+  <text class="small" x="568" y="158">1. 在三角形 AOB 中用余弦定理：</text>
+  <text class="math" x="568" y="194">AB² = 1² + 1² - 2cos(α-β)</text>
+
+  <text class="small" x="568" y="238">2. 在平面直角坐标系中用距离公式：</text>
+  <text class="math" x="568" y="274">AB² = (cos α - cos β)²</text>
+  <text class="math" x="568" y="304">    + (sin α - sin β)²</text>
+
+  <text class="small" x="568" y="350">3. 展开后，再用 sin²x + cos²x = 1 化简：</text>
+  <text class="math" x="568" y="386">AB² = 2 - 2(cos α cos β + sin α sin β)</text>
+
+  <text class="small" x="568" y="430">两边相等，直接得到：</text>
+  <text class="math" x="568" y="462">cos(α-β) = cos α cos β + sin α sin β</text>
+</svg>

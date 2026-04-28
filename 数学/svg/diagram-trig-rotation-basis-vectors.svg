@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="540" viewBox="0 0 980 540">
+  <defs>
+    <style>
+      .bg { fill: #fffdf7; }
+      .panel { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 2.4; }
+      .circle { fill: none; stroke: #0f766e; stroke-width: 3; }
+      .base { stroke: #94a3b8; stroke-width: 3; }
+      .rotL { stroke: #dc2626; stroke-width: 3.2; }
+      .rotR { stroke: #2563eb; stroke-width: 3.2; }
+      .guideX { stroke: #16a34a; stroke-width: 1.8; stroke-dasharray: 6 5; }
+      .guideY { stroke: #2563eb; stroke-width: 1.8; stroke-dasharray: 6 5; }
+      .arcA { fill: none; stroke: #7c3aed; stroke-width: 2.2; }
+      .arcB { fill: none; stroke: #f59e0b; stroke-width: 2.2; }
+      .note { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+      .title {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .panelTitle {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .text {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        fill: #0f172a;
+      }
+      .small {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 15px;
+        fill: #475569;
+      }
+      .math {
+        font-family: "Times New Roman", "Cambria Math", "STIX Two Math", "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", serif;
+        font-size: 20px;
+        fill: #0f172a;
+      }
+      .highlight {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #0f766e;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+    <marker id="arrowBase" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="980" height="540" rx="18"/>
+  <text class="title" x="34" y="44">先把两个单位方向的旋转看清楚</text>
+
+  <rect class="panel" x="34" y="82" width="430" height="330" rx="18"/>
+  <rect class="panel" x="516" y="82" width="430" height="330" rx="18"/>
+  <rect class="note" x="150" y="432" width="680" height="72" rx="16"/>
+
+  <!-- Left panel -->
+  <g transform="translate(34 82)">
+    <text class="panelTitle" x="24" y="34">(1,0) 旋转 β</text>
+
+    <g class="grid">
+      <line x1="70" y1="78" x2="360" y2="78"/>
+      <line x1="70" y1="138" x2="360" y2="138"/>
+      <line x1="70" y1="258" x2="360" y2="258"/>
+      <line x1="70" y1="318" x2="360" y2="318"/>
+      <line x1="100" y1="48" x2="100" y2="348"/>
+      <line x1="160" y1="48" x2="160" y2="348"/>
+      <line x1="280" y1="48" x2="280" y2="348"/>
+      <line x1="340" y1="48" x2="340" y2="348"/>
+    </g>
+
+    <line class="axis" x1="38" y1="198" x2="390" y2="198" marker-end="url(#arrow)"/>
+    <line class="axis" x1="210" y1="372" x2="210" y2="18" marker-end="url(#arrow)"/>
+    <circle class="circle" cx="210" cy="198" r="120"/>
+
+    <line class="base" x1="210" y1="198" x2="330" y2="198" marker-end="url(#arrowBase)"/>
+    <line class="rotL" x1="210" y1="198" x2="312" y2="135" marker-end="url(#arrowRed)"/>
+    <line class="guideX" x1="210" y1="135" x2="312" y2="135"/>
+    <line class="guideY" x1="312" y1="135" x2="312" y2="198"/>
+    <path class="arcA" d="M250 198 A40 40 0 0 0 243 176"/>
+
+    <circle cx="312" cy="135" r="5.5" fill="#dc2626"/>
+
+    <g class="text">
+      <text x="398" y="204">x</text>
+      <text x="218" y="18">y</text>
+      <text x="218" y="218">O</text>
+      <text x="336" y="202">(1,0)</text>
+      <text x="318" y="130">A(cos β, sin β)</text>
+      <text x="256" y="176">β</text>
+    </g>
+  </g>
+
+  <!-- Right panel -->
+  <g transform="translate(516 82)">
+    <text class="panelTitle" x="24" y="34">(0,1) 旋转 β</text>
+
+    <g class="grid">
+      <line x1="70" y1="78" x2="360" y2="78"/>
+      <line x1="70" y1="138" x2="360" y2="138"/>
+      <line x1="70" y1="258" x2="360" y2="258"/>
+      <line x1="70" y1="318" x2="360" y2="318"/>
+      <line x1="100" y1="48" x2="100" y2="348"/>
+      <line x1="160" y1="48" x2="160" y2="348"/>
+      <line x1="280" y1="48" x2="280" y2="348"/>
+      <line x1="340" y1="48" x2="340" y2="348"/>
+    </g>
+
+    <line class="axis" x1="38" y1="198" x2="390" y2="198" marker-end="url(#arrow)"/>
+    <line class="axis" x1="210" y1="372" x2="210" y2="18" marker-end="url(#arrow)"/>
+    <circle class="circle" cx="210" cy="198" r="120"/>
+
+    <line class="base" x1="210" y1="198" x2="210" y2="78" marker-end="url(#arrowBase)"/>
+    <line class="rotR" x1="210" y1="198" x2="141" y2="100" marker-end="url(#arrowBlue)"/>
+    <line class="guideX" x1="141" y1="100" x2="210" y2="100"/>
+    <line class="guideY" x1="141" y1="100" x2="141" y2="198"/>
+    <path class="arcB" d="M210 158 A40 40 0 0 1 229 163"/>
+
+    <circle cx="141" cy="100" r="5.5" fill="#2563eb"/>
+
+    <g class="text">
+      <text x="398" y="204">x</text>
+      <text x="218" y="18">y</text>
+      <text x="218" y="218">O</text>
+      <text x="218" y="70">(0,1)</text>
+      <text x="18" y="95">B(-sin β, cos β)</text>
+      <text x="228" y="164">β</text>
+      <text x="222" y="132">π/2 + β</text>
+    </g>
+  </g>
+
+  <text class="highlight" x="172" y="462">看右边这栏时，最关键的是：</text>
+  <text class="small" x="172" y="488">(0,1) 本来就在正上方，角度是 π/2；再逆时针转 β 后，就到了第二象限，所以横坐标变成负的。</text>
+</svg>
