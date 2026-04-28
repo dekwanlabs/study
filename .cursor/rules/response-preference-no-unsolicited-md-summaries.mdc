@@ -1,0 +1,10 @@
+---
+description: Respect the user's preference for concise outcomes instead of unsolicited markdown summary files
+alwaysApply: true
+---
+
+# Response Preference
+
+- Unless the user explicitly asks for a document summary, do not proactively create `.md` summary files.
+- When work is complete, prefer a very brief explanation of what changed and what the result is.
+- Favor concise outcome updates over long recap documents.
